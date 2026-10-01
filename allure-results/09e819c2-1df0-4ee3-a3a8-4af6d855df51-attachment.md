@@ -1,0 +1,982 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: flipkart.spec.js >> Verify search functionality in flipkart
+- Location: tests\flipkart.spec.js:4:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f1e3]:
+  - generic [ref=f1e7]:
+    - generic [ref=f1e9]:
+      - link [ref=f1e10] [cursor=pointer]:
+        - /url: /
+        - img "Flipkart" [ref=f1e11]
+      - link "Explore Plus" [ref=f1e12] [cursor=pointer]:
+        - /url: /plus
+    - generic [ref=f1e16]:
+      - textbox "Search for products, brands and more" [ref=f1e18]: DSLR Camera
+      - button [ref=f1e19] [cursor=pointer]
+    - link "Login" [ref=f1e28] [cursor=pointer]:
+      - /url: /login?ret=%2Fsearch%3Fq%3DDSLR%2520Camera%26otracker%3Dsearch%26otracker1%3Dsearch%26marketplace%3DFLIPKART%26as-show%3Don%26as%3Doff
+    - link "Become a Seller" [ref=f1e30] [cursor=pointer]:
+      - /url: https://seller.flipkart.com/sell-online/?utm_source=fkwebsite&utm_medium=websitedirect
+    - generic [ref=f1e32]: More
+    - link "Cart" [ref=f1e42] [cursor=pointer]:
+      - /url: /viewcart?exploreMode=true&preference=FLIPKART
+  - generic [ref=f1e50]:
+    - generic [ref=f1e51] [cursor=pointer]: Electronics
+    - generic [ref=f1e54] [cursor=pointer]: TVs & Appliances
+    - generic [ref=f1e57] [cursor=pointer]: Men
+    - generic [ref=f1e60] [cursor=pointer]: Women
+    - generic [ref=f1e63] [cursor=pointer]: Baby & Kids
+    - generic [ref=f1e66] [cursor=pointer]: Home & Furniture
+    - generic [ref=f1e69] [cursor=pointer]: Sports, Books & More
+    - link "Flights" [ref=f1e72] [cursor=pointer]:
+      - /url: /travel/flights?otracker=nmenu_Flights
+    - link "Offer Zone" [ref=f1e73] [cursor=pointer]:
+      - /url: /offers-list/top-deals?screen=dynamic&pk=themeViews%3DDT-OMU-A2%3ADT-OMU~widgetType%3DdealCard~contentType%3Dneo&otracker=nmenu_offer-zone
+  - generic [ref=f1e74]:
+    - generic [ref=f1e75]:
+      - generic [ref=f1e77]:
+        - generic [ref=f1e79]:
+          - generic [ref=f1e80]: Filters
+          - generic [ref=f1e84]:
+            - generic [ref=f1e85]: CATEGORIES
+            - generic [ref=f1e87]:
+              - img [ref=f1e89] [cursor=pointer]
+              - link "Cameras & Accessories" [ref=f1e91] [cursor=pointer]:
+                - /url: /cameras-accessories/pr?sid=jek&q=DSLR+Camera&otracker=categorytree
+            - generic [ref=f1e93]:
+              - img [ref=f1e95] [cursor=pointer]
+              - link "Cameras" [ref=f1e97] [cursor=pointer]:
+                - /url: /cameras/pr?sid=jek,p31&q=DSLR+Camera&otracker=categorytree
+            - generic [ref=f1e99]:
+              - img [ref=f1e101] [cursor=pointer]
+              - link "DSLR & Mirrorless" [ref=f1e103] [cursor=pointer]:
+                - /url: /cameras/dslr-mirrorless/pr?sid=jek,p31,trv&q=DSLR+Camera&otracker=categorytree
+          - generic [ref=f1e104]: Brand
+          - generic [ref=f1e109]:
+            - generic [ref=f1e110]: Price
+            - generic [ref=f1e118]:
+              - generic [ref=f1e119] [cursor=pointer]
+              - generic [ref=f1e126]:
+                - generic [ref=f1e127]: .
+                - generic [ref=f1e128]: .
+                - generic [ref=f1e129]: .
+                - generic [ref=f1e130]: .
+                - generic [ref=f1e131]: .
+                - generic [ref=f1e132]: .
+                - generic: .
+            - generic [ref=f1e133]:
+              - combobox [ref=f1e135]:
+                - option "Min" [selected]
+                - option "5000"
+                - option "10000"
+                - option "20000"
+                - option "30000"
+                - option "50000"
+              - generic [ref=f1e136]: to
+              - combobox [ref=f1e138]:
+                - option "5000"
+                - option "10000"
+                - option "20000"
+                - option "30000"
+                - option "50000"
+                - option "50000+" [selected]
+          - generic [ref=f1e139]: Video Resolution
+          - generic [ref=f1e144]: Lens Mount
+          - generic [ref=f1e149]:
+            - generic [ref=f1e150] [cursor=pointer]: Customer Ratings
+            - generic [ref=f1e155]:
+              - generic "4★ & above" [ref=f1e156] [cursor=pointer]
+              - generic "3★ & above" [ref=f1e161] [cursor=pointer]
+              - generic "2★ & above" [ref=f1e166] [cursor=pointer]
+              - generic "1★ & above" [ref=f1e171] [cursor=pointer]
+          - generic [ref=f1e176]: Effective Pixels
+          - generic [ref=f1e181]: Sensor Size
+          - generic [ref=f1e186]: Shutter Speed
+          - generic [ref=f1e191]: Mega Pixel
+          - generic [ref=f1e196]: Type
+          - generic [ref=f1e201]: Number of Lens
+          - generic [ref=f1e206]: Discount
+          - generic [ref=f1e211]: FPS in Burst Mode
+          - generic [ref=f1e216]:
+            - generic [ref=f1e217] [cursor=pointer]
+            - generic [ref=f1e222]: "?"
+          - generic [ref=f1e224]: Country Of Origin
+          - generic [ref=f1e229]: Color
+          - generic [ref=f1e234]:
+            - generic [ref=f1e235] [cursor=pointer]: Offers
+            - generic [ref=f1e240]:
+              - generic "Special Price" [ref=f1e241] [cursor=pointer]
+              - generic "Buy More, Save More" [ref=f1e246] [cursor=pointer]
+          - generic [ref=f1e251]: Features
+          - generic [ref=f1e256]: Maximum ISO
+          - generic [ref=f1e261]: Availability
+          - generic [ref=f1e266]: GST Invoice Available
+          - generic [ref=f1e271]: Maximum Shutter Speed
+        - link "Need help? Help me decide Buying Guide" [ref=f1e277] [cursor=pointer]:
+          - /url: /buying-guide/dslr-camera?sid=jek,p31,trv&otracker=bg_from_browse_lhs
+          - generic [ref=f1e278]: Need help?
+          - generic [ref=f1e279]: Help me decide
+          - img "Buying Guide" [ref=f1e282]
+      - generic [ref=f1e283]:
+        - generic [ref=f1e286]:
+          - generic [ref=f1e287]:
+            - link "Home" [ref=f1e289] [cursor=pointer]:
+              - /url: /
+            - link "Cameras & Accessories" [ref=f1e293] [cursor=pointer]:
+              - /url: /cameras-accessories/pr?sid=jek&marketplace=FLIPKART
+            - link "Cameras" [ref=f1e297] [cursor=pointer]:
+              - /url: /cameras/pr?sid=jek,p31&marketplace=FLIPKART
+            - link "DSLR & Mirrorless" [ref=f1e301] [cursor=pointer]:
+              - /url: /cameras/dslr-mirrorless/pr?sid=jek,p31,trv&marketplace=FLIPKART
+          - generic [ref=f1e302]: Showing 1 – 24 of 154 results for "DSLR Camera"
+          - generic [ref=f1e303]:
+            - generic [ref=f1e304]: Sort By
+            - generic [ref=f1e305]: Relevance
+            - generic [ref=f1e306] [cursor=pointer]: Popularity
+            - generic [ref=f1e307] [cursor=pointer]: Price -- Low to High
+            - generic [ref=f1e308] [cursor=pointer]: Price -- High to Low
+            - generic [ref=f1e309] [cursor=pointer]: Newest First
+        - 'link "Toy Imagine CMOS 3MP DSLR Camera NA Toy Imagine CMOS 3MP DSLR Camera NA 3.3 12 Ratings & 0 Reviews • Effective Pixels: 3 MP • Sensor Type: CMOS • HD • NA ₹498 ₹1,799 72% off Only few left Bank Offer" [active] [ref=f1e314] [cursor=pointer]':
+          - /url: /toy-imagine-cmos-3mp-dslr-camera-na/p/itm18fbacd4277a8?pid=DLLHN2HHVZAHQBFU&lid=LSTDLLHN2HHVZAHQBFUSJQCCF&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_1_1&otracker=search&otracker1=search&fm=organic&iid=34c76dd9-1ad8-4a00-bc5b-90d55d4f247e.DLLHN2HHVZAHQBFU.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=mi3jwgkac00000001790864579015&qH=198617266331bfb3&ov_redirect=true
+          - img "Toy Imagine CMOS 3MP DSLR Camera NA" [ref=f1e319]
+          - generic [ref=f1e324]:
+            - generic [ref=f1e325]:
+              - generic [ref=f1e326]: Toy Imagine CMOS 3MP DSLR Camera NA
+              - generic [ref=f1e327]:
+                - generic [ref=f1e328]: "3.3"
+                - generic [ref=f1e331]: 12 Ratings & 0 Reviews
+              - list [ref=f1e334]:
+                - listitem [ref=f1e335]: "• Effective Pixels: 3 MP"
+                - listitem [ref=f1e336]: "• Sensor Type: CMOS"
+                - listitem [ref=f1e337]: • HD
+                - listitem [ref=f1e338]: • NA
+            - generic [ref=f1e339]:
+              - generic [ref=f1e341]:
+                - generic [ref=f1e342]: ₹498
+                - generic [ref=f1e343]: ₹1,799
+                - generic [ref=f1e344]: 72% off
+              - generic [ref=f1e345]: Only few left
+              - generic [ref=f1e348]: Bank Offer
+        - 'link "NIKON D7000 Series D7500 DSLR Camera Body with 18-140 mm Lens NIKON D7000 Series D7500 DSLR Camera Body with 18-140 mm Lens 4.5 1,231 Ratings & 154 Reviews • 4K UHD, Follow your passion wherever it leads, Flagship Image Quality., AF and Capturing Ability (Superb shooting performance for moving subjects), Cinematic Versatility (Get your creative world in motion with stunning 4K UHD video and advanced filmmaking features), In-camera Time-lapse Movies, Power Aperture Control, Active D-Lighting, Electronic VR, Versatile Sound Controls, Designed for Performance., Touch-operation, Tilting 3.2-in. LCD Monitor, Precision Optical Viewfinder, Comfortable Grip Design, Built-in Bluetooth and Wi-Fi Connectivity • Effective Pixels: 20.9 MP • Sensor Type: CMOS • WiFi Available • 4K • 2 Year Warranty ₹78,990 ₹94,950 16% off Upto ₹60,150 Off on Exchange Bank Offer" [ref=f1e355] [cursor=pointer]':
+          - /url: /nikon-d7000-series-d7500-dslr-camera-body-18-140-mm-lens/p/itme57c2bb8a03cd?pid=DLLFCKK6GET9EEDC&lid=LSTDLLFCKK6GET9EEDCJAOQAJ&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_1_2&otracker=search&otracker1=search&fm=organic&iid=34c76dd9-1ad8-4a00-bc5b-90d55d4f247e.DLLFCKK6GET9EEDC.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=mi3jwgkac00000001790864579015&qH=198617266331bfb3&ov_redirect=true
+          - img "NIKON D7000 Series D7500 DSLR Camera Body with 18-140 mm Lens" [ref=f1e360]
+          - generic [ref=f1e365]:
+            - generic [ref=f1e366]:
+              - generic [ref=f1e367]: NIKON D7000 Series D7500 DSLR Camera Body with 18-140 mm Lens
+              - generic [ref=f1e368]:
+                - generic [ref=f1e369]: "4.5"
+                - generic [ref=f1e372]: 1,231 Ratings & 154 Reviews
+              - list [ref=f1e375]:
+                - listitem [ref=f1e376]: • 4K UHD, Follow your passion wherever it leads, Flagship Image Quality., AF and Capturing Ability (Superb shooting performance for moving subjects), Cinematic Versatility (Get your creative world in motion with stunning 4K UHD video and advanced filmmaking features), In-camera Time-lapse Movies, Power Aperture Control, Active D-Lighting, Electronic VR, Versatile Sound Controls, Designed for Performance., Touch-operation, Tilting 3.2-in. LCD Monitor, Precision Optical Viewfinder, Comfortable Grip Design, Built-in Bluetooth and Wi-Fi Connectivity
+                - listitem [ref=f1e377]: "• Effective Pixels: 20.9 MP"
+                - listitem [ref=f1e378]: "• Sensor Type: CMOS"
+                - listitem [ref=f1e379]: • WiFi Available
+                - listitem [ref=f1e380]: • 4K
+                - listitem [ref=f1e381]: • 2 Year Warranty
+            - generic [ref=f1e382]:
+              - generic [ref=f1e384]:
+                - generic [ref=f1e385]: ₹78,990
+                - generic [ref=f1e386]: ₹94,950
+                - generic [ref=f1e387]: 16% off
+              - generic [ref=f1e391]:
+                - generic [ref=f1e392]: Upto
+                - generic [ref=f1e393]: ₹60,150
+                - generic [ref=f1e394]: Off on Exchange
+              - generic [ref=f1e395]: Bank Offer
+        - 'link "BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Pink Kids Camera BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Pink Kids Camera • Effective Pixels: 13 MP • Sensor Type: CCD • Best Quality • 0 ₹480 ₹1,899 74% off Only few left Bank Offer" [ref=f1e402] [cursor=pointer]':
+          - /url: /buyluxe-camera-kids-hd-video-recording-selfie-games-dslr-pink/p/itm14396e66ed02c?pid=DLLHN3PNQJSHKHMY&lid=LSTDLLHN3PNQJSHKHMYMLVWQU&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_1_3&otracker=search&otracker1=search&fm=organic&iid=34c76dd9-1ad8-4a00-bc5b-90d55d4f247e.DLLHN3PNQJSHKHMY.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=mi3jwgkac00000001790864579015&qH=198617266331bfb3&ov_redirect=true
+          - img "BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Pink Kids Camera" [ref=f1e407]
+          - generic [ref=f1e412]:
+            - generic [ref=f1e413]:
+              - generic [ref=f1e414]: BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Pink Kids Camera
+              - list [ref=f1e416]:
+                - listitem [ref=f1e417]: "• Effective Pixels: 13 MP"
+                - listitem [ref=f1e418]: "• Sensor Type: CCD"
+                - listitem [ref=f1e419]: • Best Quality
+                - listitem [ref=f1e420]: • 0
+            - generic [ref=f1e421]:
+              - generic [ref=f1e423]:
+                - generic [ref=f1e424]: ₹480
+                - generic [ref=f1e425]: ₹1,899
+                - generic [ref=f1e426]: 74% off
+              - generic [ref=f1e427]: Only few left
+              - generic [ref=f1e430]: Bank Offer
+        - 'link "KMUYO 6 PACK OF 2 4G VIDEO CAMERA DSLR Camera IP Camera KMUYO 6 PACK OF 2 4G VIDEO CAMERA DSLR Camera IP Camera • Effective Pixels: 12 MP • Sensor Type: CMOS • WiFi Available • HD, FULL HD • https://fkmpimages.flixcart.com/iu-pre-catalog-images-feed/1762776099095-91779c6cd82746fc-FBCF0EA5EBA987F2717768D19F1C8C20 ₹5,248 ₹8,000 34% off Only few left Bank Offer" [ref=f1e437] [cursor=pointer]':
+          - /url: /kmuyo-6-pack-2-4g-video-camera-dslr-ip/p/itmea0127047cfd7?pid=DLLHZGYKCXQDFMAM&lid=LSTDLLHZGYKCXQDFMAMWUFNLI&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&spotlightTagId=default_TrendingId_jek%2Fp31%2Ftrv&srno=s_1_4&otracker=search&otracker1=search&fm=organic&iid=34c76dd9-1ad8-4a00-bc5b-90d55d4f247e.DLLHZGYKCXQDFMAM.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=mi3jwgkac00000001790864579015&qH=198617266331bfb3&ov_redirect=true
+          - img "KMUYO 6 PACK OF 2 4G VIDEO CAMERA DSLR Camera IP Camera" [ref=f1e442]
+          - generic [ref=f1e447]:
+            - generic [ref=f1e448]:
+              - generic [ref=f1e449]: KMUYO 6 PACK OF 2 4G VIDEO CAMERA DSLR Camera IP Camera
+              - list [ref=f1e451]:
+                - listitem [ref=f1e452]: "• Effective Pixels: 12 MP"
+                - listitem [ref=f1e453]: "• Sensor Type: CMOS"
+                - listitem [ref=f1e454]: • WiFi Available
+                - listitem [ref=f1e455]: • HD, FULL HD
+                - listitem [ref=f1e456]: • https://fkmpimages.flixcart.com/iu-pre-catalog-images-feed/1762776099095-91779c6cd82746fc-FBCF0EA5EBA987F2717768D19F1C8C20
+            - generic [ref=f1e457]:
+              - generic [ref=f1e459]:
+                - generic [ref=f1e460]: ₹5,248
+                - generic [ref=f1e461]: ₹8,000
+                - generic [ref=f1e462]: 34% off
+              - generic [ref=f1e463]: Only few left
+              - generic [ref=f1e466]: Bank Offer
+        - 'link "OLYMPUS EM1XINBLK DSLR Camera Camera OLYMPUS EM1XINBLK DSLR Camera Camera • Effective Pixels: 20.4 MP • Sensor Type: MOS • WiFi Available • 4K, FULL HD • 1 Year Warranty ₹2,05,712 ₹2,59,990 20% off Only 1 left Upto ₹61,650 Off on Exchange" [ref=f1e473] [cursor=pointer]':
+          - /url: /olympus-em1xinblk-dslr-camera/p/itm990ac7c9db070?pid=DLLGEFRNTPUYERXU&lid=LSTDLLGEFRNTPUYERXULITWFM&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_1_5&otracker=search&otracker1=search&fm=organic&iid=34c76dd9-1ad8-4a00-bc5b-90d55d4f247e.DLLGEFRNTPUYERXU.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=mi3jwgkac00000001790864579015&qH=198617266331bfb3&ov_redirect=true
+          - img "OLYMPUS EM1XINBLK DSLR Camera Camera" [ref=f1e478]
+          - generic [ref=f1e483]:
+            - generic [ref=f1e484]:
+              - generic [ref=f1e485]: OLYMPUS EM1XINBLK DSLR Camera Camera
+              - list [ref=f1e487]:
+                - listitem [ref=f1e488]: "• Effective Pixels: 20.4 MP"
+                - listitem [ref=f1e489]: "• Sensor Type: MOS"
+                - listitem [ref=f1e490]: • WiFi Available
+                - listitem [ref=f1e491]: • 4K, FULL HD
+                - listitem [ref=f1e492]: • 1 Year Warranty
+            - generic [ref=f1e493]:
+              - generic [ref=f1e495]:
+                - generic [ref=f1e496]: ₹2,05,712
+                - generic [ref=f1e497]: ₹2,59,990
+                - generic [ref=f1e498]: 20% off
+              - generic [ref=f1e501]: Only 1 left
+              - generic [ref=f1e505]:
+                - generic [ref=f1e506]: Upto
+                - generic [ref=f1e507]: ₹61,650
+                - generic [ref=f1e508]: Off on Exchange
+        - 'link "Canon EOS 7D Mark II DSLR Camera (Body only) Canon EOS 7D Mark II DSLR Camera (Body only) 4.1 21 Ratings & 6 Reviews • Effective Pixels: 20.2 MP • Sensor Type: CMOS • Full HD • 2 Years Canon India Warranty and Free Transit Insurance ₹99,999 ₹1,24,995 19% off Only 1 left Upto ₹60,650 Off on Exchange" [ref=f1e513] [cursor=pointer]':
+          - /url: /canon-eos-7d-mark-ii-dslr-camera-body-only/p/itm7ef20bfaa49a5?pid=CAME3YQ44SXE3SQF&lid=LSTCAME3YQ44SXE3SQFGY5OCG&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_1_6&otracker=search&otracker1=search&fm=organic&iid=34c76dd9-1ad8-4a00-bc5b-90d55d4f247e.CAME3YQ44SXE3SQF.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=mi3jwgkac00000001790864579015&qH=198617266331bfb3&ov_redirect=true
+          - img "Canon EOS 7D Mark II DSLR Camera (Body only)" [ref=f1e518]
+          - generic [ref=f1e523]:
+            - generic [ref=f1e524]:
+              - generic [ref=f1e525]: Canon EOS 7D Mark II DSLR Camera (Body only)
+              - generic [ref=f1e526]:
+                - generic [ref=f1e527]: "4.1"
+                - generic [ref=f1e530]: 21 Ratings & 6 Reviews
+              - list [ref=f1e533]:
+                - listitem [ref=f1e534]: "• Effective Pixels: 20.2 MP"
+                - listitem [ref=f1e535]: "• Sensor Type: CMOS"
+                - listitem [ref=f1e536]: • Full HD
+                - listitem [ref=f1e537]: • 2 Years Canon India Warranty and Free Transit Insurance
+            - generic [ref=f1e538]:
+              - generic [ref=f1e540]:
+                - generic [ref=f1e541]: ₹99,999
+                - generic [ref=f1e542]: ₹1,24,995
+                - generic [ref=f1e543]: 19% off
+              - generic [ref=f1e546]: Only 1 left
+              - generic [ref=f1e550]:
+                - generic [ref=f1e551]: Upto
+                - generic [ref=f1e552]: ₹60,650
+                - generic [ref=f1e553]: Off on Exchange
+        - 'link "Toy Imagine Top Quality Kids Digital Camera 3.0MP, 1080P Mini Video Camera DSLR Camera USB Rechargeabl... Toy Imagine Top Quality Kids Digital Camera 3.0MP, 1080P Mini Video Camera DSLR Camera USB Rechargeabl... 3.1 17 Ratings & 2 Reviews • Effective Pixels: 3 MP • Sensor Type: CCD • 1080 • 0 ₹542 ₹1,799 69% off Only few left Bank Offer" [ref=f1e558] [cursor=pointer]':
+          - /url: /toy-imagine-top-quality-kids-digital-camera-3-0mp-1080p-mini-video-dslr-usb-rechargeable-portable/p/itma28cadb9918bb?pid=DLLHHYD8NNH6VGZH&lid=LSTDLLHHYD8NNH6VGZHHYALL9&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_1_7&otracker=search&otracker1=search&fm=organic&iid=34c76dd9-1ad8-4a00-bc5b-90d55d4f247e.DLLHHYD8NNH6VGZH.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=mi3jwgkac00000001790864579015&qH=198617266331bfb3&ov_redirect=true
+          - img "Toy Imagine Top Quality Kids Digital Camera 3.0MP, 1080P Mini Video Camera DSLR Camera USB Rechargeabl..." [ref=f1e563]
+          - generic [ref=f1e568]:
+            - generic [ref=f1e569]:
+              - generic [ref=f1e570]: Toy Imagine Top Quality Kids Digital Camera 3.0MP, 1080P Mini Video Camera DSLR Camera USB Rechargeabl...
+              - generic [ref=f1e571]:
+                - generic [ref=f1e572]: "3.1"
+                - generic [ref=f1e575]: 17 Ratings & 2 Reviews
+              - list [ref=f1e578]:
+                - listitem [ref=f1e579]: "• Effective Pixels: 3 MP"
+                - listitem [ref=f1e580]: "• Sensor Type: CCD"
+                - listitem [ref=f1e581]: • 1080
+                - listitem [ref=f1e582]: • 0
+            - generic [ref=f1e583]:
+              - generic [ref=f1e585]:
+                - generic [ref=f1e586]: ₹542
+                - generic [ref=f1e587]: ₹1,799
+                - generic [ref=f1e588]: 69% off
+              - generic [ref=f1e589]: Only few left
+              - generic [ref=f1e592]: Bank Offer
+        - 'link "BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Pink Kids Camera BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Pink Kids Camera • Effective Pixels: 13 MP • Sensor Type: CCD • Best Quality • 0 ₹478 ₹1,699 71% off Only few left Bank Offer" [ref=f1e599] [cursor=pointer]':
+          - /url: /buyluxe-camera-kids-hd-video-recording-selfie-games-dslr-pink/p/itma6a893ac91b08?pid=DLLHN3PZBD9QT5PM&lid=LSTDLLHN3PZBD9QT5PMK3S5QW&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_1_8&otracker=search&otracker1=search&fm=organic&iid=34c76dd9-1ad8-4a00-bc5b-90d55d4f247e.DLLHN3PZBD9QT5PM.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=mi3jwgkac00000001790864579015&qH=198617266331bfb3&ov_redirect=true
+          - img "BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Pink Kids Camera" [ref=f1e604]
+          - generic [ref=f1e609]:
+            - generic [ref=f1e610]:
+              - generic [ref=f1e611]: BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Pink Kids Camera
+              - list [ref=f1e613]:
+                - listitem [ref=f1e614]: "• Effective Pixels: 13 MP"
+                - listitem [ref=f1e615]: "• Sensor Type: CCD"
+                - listitem [ref=f1e616]: • Best Quality
+                - listitem [ref=f1e617]: • 0
+            - generic [ref=f1e618]:
+              - generic [ref=f1e620]:
+                - generic [ref=f1e621]: ₹478
+                - generic [ref=f1e622]: ₹1,699
+                - generic [ref=f1e623]: 71% off
+              - generic [ref=f1e624]: Only few left
+              - generic [ref=f1e627]: Bank Offer
+        - 'link "BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Pink Kids Camera BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Pink Kids Camera • Effective Pixels: 13 MP • Sensor Type: CCD • Best Quality • 0 ₹478 ₹1,799 73% off Big Billion Days Price Only few left" [ref=f1e634] [cursor=pointer]':
+          - /url: /buyluxe-camera-kids-hd-video-recording-selfie-games-dslr-pink/p/itm22129cf6606f3?pid=DLLHN3PPPSEW5ZSV&lid=LSTDLLHN3PPPSEW5ZSVMMFDRA&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_1_9&otracker=search&otracker1=search&fm=organic&iid=34c76dd9-1ad8-4a00-bc5b-90d55d4f247e.DLLHN3PPPSEW5ZSV.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=mi3jwgkac00000001790864579015&qH=198617266331bfb3&ov_redirect=true
+          - img "BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Pink Kids Camera" [ref=f1e639]
+          - generic [ref=f1e644]:
+            - generic [ref=f1e645]:
+              - generic [ref=f1e646]: BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Pink Kids Camera
+              - list [ref=f1e648]:
+                - listitem [ref=f1e649]: "• Effective Pixels: 13 MP"
+                - listitem [ref=f1e650]: "• Sensor Type: CCD"
+                - listitem [ref=f1e651]: • Best Quality
+                - listitem [ref=f1e652]: • 0
+            - generic [ref=f1e653]:
+              - generic [ref=f1e655]:
+                - generic [ref=f1e656]: ₹478
+                - generic [ref=f1e657]: ₹1,799
+                - generic [ref=f1e658]: 73% off
+              - generic [ref=f1e659]: Big Billion Days Price
+              - generic [ref=f1e662]: Only few left
+        - 'link "BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Pink Kids Camera BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Pink Kids Camera • Effective Pixels: 13 MP • Sensor Type: CCD • Best Quality • 0 ₹498 ₹1,799 72% off Big Billion Days Price Only few left" [ref=f1e669] [cursor=pointer]':
+          - /url: /buyluxe-camera-kids-hd-video-recording-selfie-games-dslr-pink/p/itm8576d70760839?pid=DLLHN3ZY9SB3MJA5&lid=LSTDLLHN3ZY9SB3MJA5K0KHGM&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_1_10&otracker=search&otracker1=search&fm=organic&iid=34c76dd9-1ad8-4a00-bc5b-90d55d4f247e.DLLHN3ZY9SB3MJA5.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=mi3jwgkac00000001790864579015&qH=198617266331bfb3&ov_redirect=true
+          - img "BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Pink Kids Camera" [ref=f1e674]
+          - generic [ref=f1e679]:
+            - generic [ref=f1e680]:
+              - generic [ref=f1e681]: BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Pink Kids Camera
+              - list [ref=f1e683]:
+                - listitem [ref=f1e684]: "• Effective Pixels: 13 MP"
+                - listitem [ref=f1e685]: "• Sensor Type: CCD"
+                - listitem [ref=f1e686]: • Best Quality
+                - listitem [ref=f1e687]: • 0
+            - generic [ref=f1e688]:
+              - generic [ref=f1e690]:
+                - generic [ref=f1e691]: ₹498
+                - generic [ref=f1e692]: ₹1,799
+                - generic [ref=f1e693]: 72% off
+              - generic [ref=f1e694]: Big Billion Days Price
+              - generic [ref=f1e697]: Only few left
+        - 'link "BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Pink Kids Camera BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Pink Kids Camera • Effective Pixels: 13 MP • Sensor Type: CCD • Best Quality • 0 ₹480 ₹1,699 71% off Only few left Bank Offer" [ref=f1e704] [cursor=pointer]':
+          - /url: /buyluxe-camera-kids-hd-video-recording-selfie-games-dslr-pink/p/itm65fdf4a2faed3?pid=DLLHN3ZYQGZJN3TW&lid=LSTDLLHN3ZYQGZJN3TW1NX52P&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_1_11&otracker=search&otracker1=search&fm=organic&iid=34c76dd9-1ad8-4a00-bc5b-90d55d4f247e.DLLHN3ZYQGZJN3TW.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=mi3jwgkac00000001790864579015&qH=198617266331bfb3&ov_redirect=true
+          - img "BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Pink Kids Camera" [ref=f1e709]
+          - generic [ref=f1e714]:
+            - generic [ref=f1e715]:
+              - generic [ref=f1e716]: BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Pink Kids Camera
+              - list [ref=f1e718]:
+                - listitem [ref=f1e719]: "• Effective Pixels: 13 MP"
+                - listitem [ref=f1e720]: "• Sensor Type: CCD"
+                - listitem [ref=f1e721]: • Best Quality
+                - listitem [ref=f1e722]: • 0
+            - generic [ref=f1e723]:
+              - generic [ref=f1e725]:
+                - generic [ref=f1e726]: ₹480
+                - generic [ref=f1e727]: ₹1,699
+                - generic [ref=f1e728]: 71% off
+              - generic [ref=f1e729]: Only few left
+              - generic [ref=f1e732]: Bank Offer
+        - 'link "BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Blue Kids Camera BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Blue Kids Camera • Effective Pixels: 13 MP • Sensor Type: CCD • Best Quality • 0 ₹478 ₹1,899 74% off Bank Offer" [ref=f1e739] [cursor=pointer]':
+          - /url: /buyluxe-camera-kids-hd-video-recording-selfie-games-dslr-blue/p/itmd17e27ab9f477?pid=DLLHN3ZXSSNAZNP3&lid=LSTDLLHN3ZXSSNAZNP30YQNE1&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_1_12&otracker=search&otracker1=search&fm=organic&iid=34c76dd9-1ad8-4a00-bc5b-90d55d4f247e.DLLHN3ZXSSNAZNP3.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=mi3jwgkac00000001790864579015&qH=198617266331bfb3&ov_redirect=true
+          - img "BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Blue Kids Camera" [ref=f1e744]
+          - generic [ref=f1e749]:
+            - generic [ref=f1e750]:
+              - generic [ref=f1e751]: BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Blue Kids Camera
+              - list [ref=f1e753]:
+                - listitem [ref=f1e754]: "• Effective Pixels: 13 MP"
+                - listitem [ref=f1e755]: "• Sensor Type: CCD"
+                - listitem [ref=f1e756]: • Best Quality
+                - listitem [ref=f1e757]: • 0
+            - generic [ref=f1e758]:
+              - generic [ref=f1e760]:
+                - generic [ref=f1e761]: ₹478
+                - generic [ref=f1e762]: ₹1,899
+                - generic [ref=f1e763]: 74% off
+              - generic [ref=f1e764]: Bank Offer
+        - 'link "BuyLuxe HD Video Recording Kids Camera DSLR Camera HD Video Recording Kids Camera BuyLuxe HD Video Recording Kids Camera DSLR Camera HD Video Recording Kids Camera • Effective Pixels: 13 MP • Sensor Type: CCD • Best Quality • 0 ₹478 ₹1,899 74% off Only few left Bank Offer" [ref=f1e771] [cursor=pointer]':
+          - /url: /buyluxe-hd-video-recording-kids-camera-dslr/p/itm1ad13f72d6a73?pid=DLLHN3ZTCHABPGX8&lid=LSTDLLHN3ZTCHABPGX8AZP5CQ&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_1_13&otracker=search&otracker1=search&fm=organic&iid=34c76dd9-1ad8-4a00-bc5b-90d55d4f247e.DLLHN3ZTCHABPGX8.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=mi3jwgkac00000001790864579015&qH=198617266331bfb3&ov_redirect=true
+          - img "BuyLuxe HD Video Recording Kids Camera DSLR Camera HD Video Recording Kids Camera" [ref=f1e776]
+          - generic [ref=f1e781]:
+            - generic [ref=f1e782]:
+              - generic [ref=f1e783]: BuyLuxe HD Video Recording Kids Camera DSLR Camera HD Video Recording Kids Camera
+              - list [ref=f1e785]:
+                - listitem [ref=f1e786]: "• Effective Pixels: 13 MP"
+                - listitem [ref=f1e787]: "• Sensor Type: CCD"
+                - listitem [ref=f1e788]: • Best Quality
+                - listitem [ref=f1e789]: • 0
+            - generic [ref=f1e790]:
+              - generic [ref=f1e792]:
+                - generic [ref=f1e793]: ₹478
+                - generic [ref=f1e794]: ₹1,899
+                - generic [ref=f1e795]: 74% off
+              - generic [ref=f1e796]: Only few left
+              - generic [ref=f1e799]: Bank Offer
+        - 'link "NIKON D850 DSLR Camera Body Only NIKON D850 DSLR Camera Body Only 4.7 19 Ratings & 2 Reviews • 4K UHD Full Frame, Higher Resolution. Faster Speed. Greater Versatility., Fast continuous shooting, flagship autofocus and precise metering., 153 Point AF System, Autofocus Down to -4 EV, Speed to Match Your Vision, A Multimedia Powerhouse., Focus Peaking, Selectable Highlight Detection, TOUCH MONITOR Tilt and Touch, FOCUS STACKING, XQD Storage, Built-in Wireless Connectivity, Designed to Outperform., Phenomenal Battery Performance, Withstand the Elements, Extreme resolution meets extreme speed. • Effective Pixels: 45.7 MP • Sensor Type: CMOS • WiFi Available • Full HD • 2 Years Warranty ₹1,56,990 ₹2,34,950 33% off Big Billion Days Price Only 3 left" [ref=f1e806] [cursor=pointer]':
+          - /url: /nikon-d850-dslr-camera-body-only/p/itm67ace0c4a825f?pid=DLLF65NSFMNPVPXD&lid=LSTDLLF65NSFMNPVPXDPQPSMO&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_1_14&otracker=search&otracker1=search&fm=organic&iid=34c76dd9-1ad8-4a00-bc5b-90d55d4f247e.DLLF65NSFMNPVPXD.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=mi3jwgkac00000001790864579015&qH=198617266331bfb3&ov_redirect=true
+          - img "NIKON D850 DSLR Camera Body Only" [ref=f1e811]
+          - generic [ref=f1e816]:
+            - generic [ref=f1e817]:
+              - generic [ref=f1e818]: NIKON D850 DSLR Camera Body Only
+              - generic [ref=f1e819]:
+                - generic [ref=f1e820]: "4.7"
+                - generic [ref=f1e823]: 19 Ratings & 2 Reviews
+              - list [ref=f1e826]:
+                - listitem [ref=f1e827]: • 4K UHD Full Frame, Higher Resolution. Faster Speed. Greater Versatility., Fast continuous shooting, flagship autofocus and precise metering., 153 Point AF System, Autofocus Down to -4 EV, Speed to Match Your Vision, A Multimedia Powerhouse., Focus Peaking, Selectable Highlight Detection, TOUCH MONITOR Tilt and Touch, FOCUS STACKING, XQD Storage, Built-in Wireless Connectivity, Designed to Outperform., Phenomenal Battery Performance, Withstand the Elements, Extreme resolution meets extreme speed.
+                - listitem [ref=f1e828]: "• Effective Pixels: 45.7 MP"
+                - listitem [ref=f1e829]: "• Sensor Type: CMOS"
+                - listitem [ref=f1e830]: • WiFi Available
+                - listitem [ref=f1e831]: • Full HD
+                - listitem [ref=f1e832]: • 2 Years Warranty
+            - generic [ref=f1e833]:
+              - generic [ref=f1e835]:
+                - generic [ref=f1e836]: ₹1,56,990
+                - generic [ref=f1e837]: ₹2,34,950
+                - generic [ref=f1e838]: 33% off
+              - generic [ref=f1e841]: Big Billion Days Price
+              - generic [ref=f1e844]: Only 3 left
+        - 'link "KMUYO 6 KIDS CAMERA DSLR Camera Instant Camera KMUYO 6 KIDS CAMERA DSLR Camera Instant Camera • Effective Pixels: 12 MP • Sensor Type: CMOS • HD, FULL HD • 1 Year Warranty From The Date Delivery against any manufacturing Defects In Material And Workmanship. Note warranty terms- - Battery carries only 6 months warranty - No warranty for Accessories, cables or Tools supplied - Warranty Does Not Cover Damages Rr by asking the customer to bring the product at a certain Service Centeretc. ₹740 ₹2,600 71% off Bank Offer" [ref=f1e851] [cursor=pointer]':
+          - /url: /kmuyo-6-kids-camera-dslr-instant/p/itmca779bc54ecdd?pid=DLLHZGYFBFRZHKRJ&lid=LSTDLLHZGYFBFRZHKRJ3MNTJY&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_1_15&otracker=search&otracker1=search&fm=organic&iid=34c76dd9-1ad8-4a00-bc5b-90d55d4f247e.DLLHZGYFBFRZHKRJ.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=mi3jwgkac00000001790864579015&qH=198617266331bfb3&ov_redirect=true
+          - img "KMUYO 6 KIDS CAMERA DSLR Camera Instant Camera" [ref=f1e856]
+          - generic [ref=f1e861]:
+            - generic [ref=f1e862]:
+              - generic [ref=f1e863]: KMUYO 6 KIDS CAMERA DSLR Camera Instant Camera
+              - list [ref=f1e865]:
+                - listitem [ref=f1e866]: "• Effective Pixels: 12 MP"
+                - listitem [ref=f1e867]: "• Sensor Type: CMOS"
+                - listitem [ref=f1e868]: • HD, FULL HD
+                - listitem [ref=f1e869]: • 1 Year Warranty From The Date Delivery against any manufacturing Defects In Material And Workmanship. Note warranty terms- - Battery carries only 6 months warranty - No warranty for Accessories, cables or Tools supplied - Warranty Does Not Cover Damages Rr by asking the customer to bring the product at a certain Service Centeretc.
+            - generic [ref=f1e870]:
+              - generic [ref=f1e872]:
+                - generic [ref=f1e873]: ₹740
+                - generic [ref=f1e874]: ₹2,600
+                - generic [ref=f1e875]: 71% off
+              - generic [ref=f1e876]: Bank Offer
+        - 'link "BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Blue Kids Camera BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Blue Kids Camera • Effective Pixels: 13 MP • Sensor Type: CCD • Best Quality • 0 ₹478 ₹1,899 74% off Only few left Bank Offer" [ref=f1e883] [cursor=pointer]':
+          - /url: /buyluxe-camera-kids-hd-video-recording-selfie-games-dslr-blue/p/itm254245fc81df9?pid=DLLHN3PZBZHDUVHS&lid=LSTDLLHN3PZBZHDUVHS0YFAWI&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_1_16&otracker=search&otracker1=search&fm=organic&iid=34c76dd9-1ad8-4a00-bc5b-90d55d4f247e.DLLHN3PZBZHDUVHS.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=mi3jwgkac00000001790864579015&qH=198617266331bfb3&ov_redirect=true
+          - img "BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Blue Kids Camera" [ref=f1e888]
+          - generic [ref=f1e893]:
+            - generic [ref=f1e894]:
+              - generic [ref=f1e895]: BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Blue Kids Camera
+              - list [ref=f1e897]:
+                - listitem [ref=f1e898]: "• Effective Pixels: 13 MP"
+                - listitem [ref=f1e899]: "• Sensor Type: CCD"
+                - listitem [ref=f1e900]: • Best Quality
+                - listitem [ref=f1e901]: • 0
+            - generic [ref=f1e902]:
+              - generic [ref=f1e904]:
+                - generic [ref=f1e905]: ₹478
+                - generic [ref=f1e906]: ₹1,899
+                - generic [ref=f1e907]: 74% off
+              - generic [ref=f1e908]: Only few left
+              - generic [ref=f1e911]: Bank Offer
+        - 'link "BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Blue Kids Camera BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Blue Kids Camera • Effective Pixels: 13 MP • Sensor Type: CCD • Best Quality • 0 ₹480 ₹1,899 74% off Only few left Bank Offer" [ref=f1e918] [cursor=pointer]':
+          - /url: /buyluxe-camera-kids-hd-video-recording-selfie-games-dslr-blue/p/itm79e5bcb033c19?pid=DLLHN3ZSVZY9CU2V&lid=LSTDLLHN3ZSVZY9CU2VX6I7XW&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_1_17&otracker=search&otracker1=search&fm=organic&iid=34c76dd9-1ad8-4a00-bc5b-90d55d4f247e.DLLHN3ZSVZY9CU2V.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=mi3jwgkac00000001790864579015&qH=198617266331bfb3&ov_redirect=true
+          - img "BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Blue Kids Camera" [ref=f1e923]
+          - generic [ref=f1e928]:
+            - generic [ref=f1e929]:
+              - generic [ref=f1e930]: BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Blue Kids Camera
+              - list [ref=f1e932]:
+                - listitem [ref=f1e933]: "• Effective Pixels: 13 MP"
+                - listitem [ref=f1e934]: "• Sensor Type: CCD"
+                - listitem [ref=f1e935]: • Best Quality
+                - listitem [ref=f1e936]: • 0
+            - generic [ref=f1e937]:
+              - generic [ref=f1e939]:
+                - generic [ref=f1e940]: ₹480
+                - generic [ref=f1e941]: ₹1,899
+                - generic [ref=f1e942]: 74% off
+              - generic [ref=f1e943]: Only few left
+              - generic [ref=f1e946]: Bank Offer
+        - 'link "KMUYO 6 CAR KEY DSLR Camera IP Camera KMUYO 6 CAR KEY DSLR Camera IP Camera • Effective Pixels: 12 MP • Sensor Type: CMOS • HD, FULL HD • https://fkmpimages.flixcart.com/iu-pre-catalog-images-feed/1762168988984-91779c6cd82746fc-68C6EFDBE288F823BDD6837A7F9AD0A7 ₹4,951 ₹6,000 17% off Only few left Bank Offer" [ref=f1e953] [cursor=pointer]':
+          - /url: /kmuyo-6-car-key-dslr-camera-ip/p/itmf4be51945d046?pid=DLLHZGYNYNCFDNXB&lid=LSTDLLHZGYNYNCFDNXBF0Z92X&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_1_18&otracker=search&otracker1=search&fm=organic&iid=34c76dd9-1ad8-4a00-bc5b-90d55d4f247e.DLLHZGYNYNCFDNXB.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=mi3jwgkac00000001790864579015&qH=198617266331bfb3&ov_redirect=true
+          - img "KMUYO 6 CAR KEY DSLR Camera IP Camera" [ref=f1e958]
+          - generic [ref=f1e963]:
+            - generic [ref=f1e964]:
+              - generic [ref=f1e965]: KMUYO 6 CAR KEY DSLR Camera IP Camera
+              - list [ref=f1e967]:
+                - listitem [ref=f1e968]: "• Effective Pixels: 12 MP"
+                - listitem [ref=f1e969]: "• Sensor Type: CMOS"
+                - listitem [ref=f1e970]: • HD, FULL HD
+                - listitem [ref=f1e971]: • https://fkmpimages.flixcart.com/iu-pre-catalog-images-feed/1762168988984-91779c6cd82746fc-68C6EFDBE288F823BDD6837A7F9AD0A7
+            - generic [ref=f1e972]:
+              - generic [ref=f1e974]:
+                - generic [ref=f1e975]: ₹4,951
+                - generic [ref=f1e976]: ₹6,000
+                - generic [ref=f1e977]: 17% off
+              - generic [ref=f1e978]: Only few left
+              - generic [ref=f1e981]: Bank Offer
+        - 'link "BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Best BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Best • Effective Pixels: 13 MP • Sensor Type: CCD • Best Quality • 0 ₹480 ₹1,899 74% off Only few left Bank Offer" [ref=f1e988] [cursor=pointer]':
+          - /url: /buyluxe-camera-kids-hd-video-recording-selfie-games-dslr-best/p/itm312ad54094ada?pid=DLLHN2QQXSZT8NWS&lid=LSTDLLHN2QQXSZT8NWSAEOT4U&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_1_19&otracker=search&otracker1=search&fm=organic&iid=34c76dd9-1ad8-4a00-bc5b-90d55d4f247e.DLLHN2QQXSZT8NWS.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=mi3jwgkac00000001790864579015&qH=198617266331bfb3&ov_redirect=true
+          - img "BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Best" [ref=f1e993]
+          - generic [ref=f1e998]:
+            - generic [ref=f1e999]:
+              - generic [ref=f1e1000]: BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera and Games DSLR Camera Best
+              - list [ref=f1e1002]:
+                - listitem [ref=f1e1003]: "• Effective Pixels: 13 MP"
+                - listitem [ref=f1e1004]: "• Sensor Type: CCD"
+                - listitem [ref=f1e1005]: • Best Quality
+                - listitem [ref=f1e1006]: • 0
+            - generic [ref=f1e1007]:
+              - generic [ref=f1e1009]:
+                - generic [ref=f1e1010]: ₹480
+                - generic [ref=f1e1011]: ₹1,899
+                - generic [ref=f1e1012]: 74% off
+              - generic [ref=f1e1013]: Only few left
+              - generic [ref=f1e1016]: Bank Offer
+        - 'link "BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera & Games DSLR Camera Best Quality BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera & Games DSLR Camera Best Quality • Effective Pixels: 13 MP • Sensor Type: CCD • Best • NA ₹605 ₹665 9% off Only few left Bank Offer" [ref=f1e1023] [cursor=pointer]':
+          - /url: /buyluxe-camera-kids-hd-video-recording-selfie-games-dslr-best-quality/p/itm76b0f967ceb3d?pid=DLLHN2PGZHFJGDZK&lid=LSTDLLHN2PGZHFJGDZKGE6DXX&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_1_20&otracker=search&otracker1=search&fm=organic&iid=34c76dd9-1ad8-4a00-bc5b-90d55d4f247e.DLLHN2PGZHFJGDZK.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=mi3jwgkac00000001790864579015&qH=198617266331bfb3&ov_redirect=true
+          - img "BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera & Games DSLR Camera Best Quality" [ref=f1e1028]
+          - generic [ref=f1e1033]:
+            - generic [ref=f1e1034]:
+              - generic [ref=f1e1035]: BuyLuxe Camera for Kids with HD Video Recording, Selfie Camera & Games DSLR Camera Best Quality
+              - list [ref=f1e1037]:
+                - listitem [ref=f1e1038]: "• Effective Pixels: 13 MP"
+                - listitem [ref=f1e1039]: "• Sensor Type: CCD"
+                - listitem [ref=f1e1040]: • Best
+                - listitem [ref=f1e1041]: • NA
+            - generic [ref=f1e1042]:
+              - generic [ref=f1e1044]:
+                - generic [ref=f1e1045]: ₹605
+                - generic [ref=f1e1046]: ₹665
+                - generic [ref=f1e1047]: 9% off
+              - generic [ref=f1e1050]: Only few left
+              - generic [ref=f1e1053]: Bank Offer
+        - 'link "Canon EOS R100 Mirrorless Camera RF-S 18-45mm f/4.5-6.3 IS STM Canon EOS R100 Mirrorless Camera RF-S 18-45mm f/4.5-6.3 IS STM 4.4 2,083 Ratings & 204 Reviews • DIGIC 8 Image Processor, 4K 24p Video with Crop, Full HD 60p, Dual Pixel CMOS AF with 143 AF Zones, 6.5 fps Electronic Shutter, 2.36m-Dot OLED EVF, 3\" 1.04m-Dot LCD Screen, Creative Assist Mode, Silent Mode for Quiet Operation, Bluetooth with SD Card Slot • Effective Pixels: 24.1 MP • Sensor Type: CMOS • WiFi Available • 4K • 2 Years Warranty ₹48,460 ₹64,995 25% off Upto ₹37,800 Off on Exchange Bank Offer" [ref=f1e1060] [cursor=pointer]':
+          - /url: /canon-eos-r100-mirrorless-camera-rf-s-18-45mm-f-4-5-6-3-stm/p/itm3bc65ea11d81b?pid=DLLGQAQYNT39ZJTG&lid=LSTDLLGQAQYNT39ZJTGWF2CZS&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_1_21&otracker=search&otracker1=search&fm=organic&iid=34c76dd9-1ad8-4a00-bc5b-90d55d4f247e.DLLGQAQYNT39ZJTG.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=mi3jwgkac00000001790864579015&qH=198617266331bfb3&ov_redirect=true
+          - img "Canon EOS R100 Mirrorless Camera RF-S 18-45mm f/4.5-6.3 IS STM" [ref=f1e1065]
+          - generic [ref=f1e1070]:
+            - generic [ref=f1e1071]:
+              - generic [ref=f1e1072]: Canon EOS R100 Mirrorless Camera RF-S 18-45mm f/4.5-6.3 IS STM
+              - generic [ref=f1e1073]:
+                - generic [ref=f1e1074]: "4.4"
+                - generic [ref=f1e1077]: 2,083 Ratings & 204 Reviews
+              - list [ref=f1e1080]:
+                - listitem [ref=f1e1081]: • DIGIC 8 Image Processor, 4K 24p Video with Crop, Full HD 60p, Dual Pixel CMOS AF with 143 AF Zones, 6.5 fps Electronic Shutter, 2.36m-Dot OLED EVF, 3" 1.04m-Dot LCD Screen, Creative Assist Mode, Silent Mode for Quiet Operation, Bluetooth with SD Card Slot
+                - listitem [ref=f1e1082]: "• Effective Pixels: 24.1 MP"
+                - listitem [ref=f1e1083]: "• Sensor Type: CMOS"
+                - listitem [ref=f1e1084]: • WiFi Available
+                - listitem [ref=f1e1085]: • 4K
+                - listitem [ref=f1e1086]: • 2 Years Warranty
+            - generic [ref=f1e1087]:
+              - generic [ref=f1e1089]:
+                - generic [ref=f1e1090]: ₹48,460
+                - generic [ref=f1e1091]: ₹64,995
+                - generic [ref=f1e1092]: 25% off
+              - generic [ref=f1e1096]:
+                - generic [ref=f1e1097]: Upto
+                - generic [ref=f1e1098]: ₹37,800
+                - generic [ref=f1e1099]: Off on Exchange
+              - generic [ref=f1e1100]: Bank Offer
+        - 'link "Canon EOS R50 Mirrorless Camera Body with RF - S 18 - 45 mm f/4.5 - 6.3 IS STM Canon EOS R50 Mirrorless Camera Body with RF - S 18 - 45 mm f/4.5 - 6.3 IS STM 4.6 1,288 Ratings & 151 Reviews • 4K 30p (6K oversampled) & FHD 120p, Up to 15 frames per second & EOS iTR AF X, Shoot all angles, Dual Pixel CMOS Auto Focus II coupled, Capture more unmissable moments at 12fps3. Switch up to 15fps when using silent electronic shutter4., UHD 4K 30p video, SLOW MOTION FOR IMPACT, Enhanced streaming and video calls, SEAMLESS CONNECTIVITY, Bluetooth?and Wi-Fi connectivity enable easy remote shooting8. • Effective Pixels: 24.2 MP • Sensor Type: CMOS • H.264/H.265/MPEG-4/4K • 2 Years Warranty ₹67,990 ₹75,995 10% off Only 4 left Upto ₹49,250 Off on Exchange" [ref=f1e1107] [cursor=pointer]':
+          - /url: /canon-eos-r50-mirrorless-camera-body-rf-s-18-45-mm-f-4-5-6-3-stm/p/itm3bc65ea11d81b?pid=DLLGN2WBZ6JJS3JJ&lid=LSTDLLGN2WBZ6JJS3JJFZSEOW&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_1_22&otracker=search&otracker1=search&fm=organic&iid=34c76dd9-1ad8-4a00-bc5b-90d55d4f247e.DLLGN2WBZ6JJS3JJ.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=mi3jwgkac00000001790864579015&qH=198617266331bfb3&ov_redirect=true
+          - img "Canon EOS R50 Mirrorless Camera Body with RF - S 18 - 45 mm f/4.5 - 6.3 IS STM" [ref=f1e1112]
+          - generic [ref=f1e1117]:
+            - generic [ref=f1e1118]:
+              - generic [ref=f1e1119]: Canon EOS R50 Mirrorless Camera Body with RF - S 18 - 45 mm f/4.5 - 6.3 IS STM
+              - generic [ref=f1e1120]:
+                - generic [ref=f1e1121]: "4.6"
+                - generic [ref=f1e1124]: 1,288 Ratings & 151 Reviews
+              - list [ref=f1e1127]:
+                - listitem [ref=f1e1128]: • 4K 30p (6K oversampled) & FHD 120p, Up to 15 frames per second & EOS iTR AF X, Shoot all angles, Dual Pixel CMOS Auto Focus II coupled, Capture more unmissable moments at 12fps3. Switch up to 15fps when using silent electronic shutter4., UHD 4K 30p video, SLOW MOTION FOR IMPACT, Enhanced streaming and video calls, SEAMLESS CONNECTIVITY, Bluetooth?and Wi-Fi connectivity enable easy remote shooting8.
+                - listitem [ref=f1e1129]: "• Effective Pixels: 24.2 MP"
+                - listitem [ref=f1e1130]: "• Sensor Type: CMOS"
+                - listitem [ref=f1e1131]: • H.264/H.265/MPEG-4/4K
+                - listitem [ref=f1e1132]: • 2 Years Warranty
+            - generic [ref=f1e1133]:
+              - generic [ref=f1e1135]:
+                - generic [ref=f1e1136]: ₹67,990
+                - generic [ref=f1e1137]: ₹75,995
+                - generic [ref=f1e1138]: 10% off
+              - generic [ref=f1e1141]: Only 4 left
+              - generic [ref=f1e1145]:
+                - generic [ref=f1e1146]: Upto
+                - generic [ref=f1e1147]: ₹49,250
+                - generic [ref=f1e1148]: Off on Exchange
+        - 'link "Canon EOS R50 Mirrorless Camera Body with RF - S 18 - 45 mm f/4.5 - 6.3 IS STM Canon EOS R50 Mirrorless Camera Body with RF - S 18 - 45 mm f/4.5 - 6.3 IS STM 4.6 1,288 Ratings & 151 Reviews • 4K 30p (6K oversampled) & FHD 120p, Up to 15 frames per second & EOS iTR AF X, Shoot all angles, Dual Pixel CMOS Auto Focus II coupled, Capture more unmissable moments at 12fps3. Switch up to 15fps when using silent electronic shutter4., UHD 4K 30p video, SLOW MOTION FOR IMPACT, Enhanced streaming and video calls, SEAMLESS CONNECTIVITY, Bluetooth?and Wi-Fi connectivity enable easy remote shooting8. • Effective Pixels: 24.2 MP • Sensor Type: CMOS • H.264/H.265/MPEG-4/4K • 2 Years Warranty ₹67,990 ₹75,995 10% off Upto ₹49,750 Off on Exchange Bank Offer" [ref=f1e1153] [cursor=pointer]':
+          - /url: /canon-eos-r50-mirrorless-camera-body-rf-s-18-45-mm-f-4-5-6-3-stm/p/itmfdd16b16cfce4?pid=DLLGN2WBD6HHBWWE&lid=LSTDLLGN2WBD6HHBWWETTMAX2&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_1_23&otracker=search&otracker1=search&fm=organic&iid=34c76dd9-1ad8-4a00-bc5b-90d55d4f247e.DLLGN2WBD6HHBWWE.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=mi3jwgkac00000001790864579015&qH=198617266331bfb3&ov_redirect=true
+          - img "Canon EOS R50 Mirrorless Camera Body with RF - S 18 - 45 mm f/4.5 - 6.3 IS STM" [ref=f1e1158]
+          - generic [ref=f1e1163]:
+            - generic [ref=f1e1164]:
+              - generic [ref=f1e1165]: Canon EOS R50 Mirrorless Camera Body with RF - S 18 - 45 mm f/4.5 - 6.3 IS STM
+              - generic [ref=f1e1166]:
+                - generic [ref=f1e1167]: "4.6"
+                - generic [ref=f1e1170]: 1,288 Ratings & 151 Reviews
+              - list [ref=f1e1173]:
+                - listitem [ref=f1e1174]: • 4K 30p (6K oversampled) & FHD 120p, Up to 15 frames per second & EOS iTR AF X, Shoot all angles, Dual Pixel CMOS Auto Focus II coupled, Capture more unmissable moments at 12fps3. Switch up to 15fps when using silent electronic shutter4., UHD 4K 30p video, SLOW MOTION FOR IMPACT, Enhanced streaming and video calls, SEAMLESS CONNECTIVITY, Bluetooth?and Wi-Fi connectivity enable easy remote shooting8.
+                - listitem [ref=f1e1175]: "• Effective Pixels: 24.2 MP"
+                - listitem [ref=f1e1176]: "• Sensor Type: CMOS"
+                - listitem [ref=f1e1177]: • H.264/H.265/MPEG-4/4K
+                - listitem [ref=f1e1178]: • 2 Years Warranty
+            - generic [ref=f1e1179]:
+              - generic [ref=f1e1181]:
+                - generic [ref=f1e1182]: ₹67,990
+                - generic [ref=f1e1183]: ₹75,995
+                - generic [ref=f1e1184]: 10% off
+              - generic [ref=f1e1188]:
+                - generic [ref=f1e1189]: Upto
+                - generic [ref=f1e1190]: ₹49,750
+                - generic [ref=f1e1191]: Off on Exchange
+              - generic [ref=f1e1192]: Bank Offer
+        - 'link "BuyLuxe Mini HD Digital Camera for Kids – Photo & Video Camera Toy 13MP DSLR Camera Add to Compare BuyLuxe Mini HD Digital Camera for Kids – Photo & Video Camera Toy 13MP DSLR Camera 3.5 13 Ratings & 1 Reviews • Effective Pixels: 13 MP • Optical Zoom: 0 • Sensor Type: CCD | LCD Size: 6 inch • Max Shutter Speed: 0 • 0 ₹550 ₹1,599 65% off Big Billion Days Price Only few left" [ref=f1e1199] [cursor=pointer]':
+          - /url: /buyluxe-mini-hd-digital-camera-kids-photo-video-toy-13mp-dslr/p/itm602821a5a1dd6?pid=CAMHKVH5FPBYXRXK&lid=LSTCAMHKVH5FPBYXRXK8HRKFX&marketplace=FLIPKART&q=DSLR+Camera&store=jek%2Fp31%2Ftrv&srno=s_1_24&otracker=search&otracker1=search&fm=organic&iid=34c76dd9-1ad8-4a00-bc5b-90d55d4f247e.CAMHKVH5FPBYXRXK.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=mi3jwgkac00000001790864579015&qH=198617266331bfb3&ov_redirect=true
+          - generic [ref=f1e1200]:
+            - img "BuyLuxe Mini HD Digital Camera for Kids – Photo & Video Camera Toy 13MP DSLR Camera" [ref=f1e1204]
+            - generic [ref=f1e1205]: Add to Compare
+          - generic [ref=f1e1215]:
+            - generic [ref=f1e1216]:
+              - generic [ref=f1e1217]: BuyLuxe Mini HD Digital Camera for Kids – Photo & Video Camera Toy 13MP DSLR Camera
+              - generic [ref=f1e1218]:
+                - generic [ref=f1e1219]: "3.5"
+                - generic [ref=f1e1222]: 13 Ratings & 1 Reviews
+              - list [ref=f1e1225]:
+                - listitem [ref=f1e1226]: "• Effective Pixels: 13 MP"
+                - listitem [ref=f1e1227]: "• Optical Zoom: 0"
+                - listitem [ref=f1e1228]: "• Sensor Type: CCD | LCD Size: 6 inch"
+                - listitem [ref=f1e1229]: "• Max Shutter Speed: 0"
+                - listitem [ref=f1e1230]: • 0
+            - generic [ref=f1e1231]:
+              - generic [ref=f1e1233]:
+                - generic [ref=f1e1234]: ₹550
+                - generic [ref=f1e1235]: ₹1,599
+                - generic [ref=f1e1236]: 65% off
+              - generic [ref=f1e1237]: Big Billion Days Price
+              - generic [ref=f1e1240]: Only few left
+        - generic [ref=f1e1245]:
+          - generic [ref=f1e1246]: Page 1 of 7
+          - navigation [ref=f1e1247]:
+            - link "1" [ref=f1e1248] [cursor=pointer]:
+              - /url: /search?q=DSLR+Camera&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off&page=1
+            - link "2" [ref=f1e1249] [cursor=pointer]:
+              - /url: /search?q=DSLR+Camera&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off&page=2
+            - link "3" [ref=f1e1250] [cursor=pointer]:
+              - /url: /search?q=DSLR+Camera&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off&page=3
+            - link "4" [ref=f1e1251] [cursor=pointer]:
+              - /url: /search?q=DSLR+Camera&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off&page=4
+            - link "5" [ref=f1e1252] [cursor=pointer]:
+              - /url: /search?q=DSLR+Camera&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off&page=5
+            - link "6" [ref=f1e1253] [cursor=pointer]:
+              - /url: /search?q=DSLR+Camera&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off&page=6
+            - link "7" [ref=f1e1254] [cursor=pointer]:
+              - /url: /search?q=DSLR+Camera&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off&page=7
+            - link "Next" [ref=f1e1255] [cursor=pointer]:
+              - /url: /search?q=DSLR+Camera&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off&page=2
+        - generic [ref=f1e1257]:
+          - text: Did you find what you were looking for?
+          - generic [ref=f1e1258]:
+            - generic [ref=f1e1259] [cursor=pointer]: "Yes"
+            - generic [ref=f1e1260] [cursor=pointer]: "No"
+    - generic [ref=f1e1262]:
+      - generic [ref=f1e1263]: Reviews for Popular DSLR & Mirrorless
+      - generic [ref=f1e1264]:
+        - generic [ref=f1e1265]:
+          - generic [ref=f1e1267]:
+            - img "Canon EOS 7D Mark II DSLR Camera (Body only)"
+          - generic [ref=f1e1268]:
+            - link "1. Canon EOS 7D Mark II DSLR C... 4.1 21 Ratings&6 Reviews ₹99,999 19% off" [ref=f1e1269] [cursor=pointer]:
+              - /url: /canon-eos-7d-mark-ii-dslr-camera-body-only/p/itm7ef20bfaa49a5?pid=CAME3YQ44SXE3SQF&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=f1e1270]: 1. Canon EOS 7D Mark II DSLR C...
+              - generic [ref=f1e1272]:
+                - generic [ref=f1e1273]: "4.1"
+                - generic [ref=f1e1275]:
+                  - text: 21 Ratings
+                  - generic [ref=f1e1276]: "&6 Reviews"
+              - generic [ref=f1e1278]:
+                - generic [ref=f1e1279]: ₹99,999
+                - generic [ref=f1e1280]: 19% off
+            - list [ref=f1e1281]:
+              - listitem [ref=f1e1282]: "Effective Pixels: 20.2 MP"
+              - listitem [ref=f1e1283]: "Sensor Type: CMOS"
+              - listitem [ref=f1e1284]: Full HD
+        - generic [ref=f1e1285]:
+          - generic [ref=f1e1286]: Most Helpful Review
+          - generic [ref=f1e1288]:
+            - generic [ref=f1e1289]:
+              - generic [ref=f1e1290]: "5"
+              - paragraph [ref=f1e1292]: Shubham sanjay khanvilkar
+            - generic [ref=f1e1293]: My mom gifted me this dslr on my bday...since then i fallen in love with this instrument..awesome pics..:D
+            - generic [ref=f1e1298]:
+              - paragraph [ref=f1e1299]: Shubham sanjay khanvilkar
+              - paragraph [ref=f1e1300]: Apr, 2016
+        - generic [ref=f1e1301]:
+          - generic [ref=f1e1302]: Recent Review
+          - generic [ref=f1e1304]:
+            - generic [ref=f1e1305]:
+              - generic [ref=f1e1306]: "5"
+              - paragraph [ref=f1e1308]: Brilliant
+            - generic [ref=f1e1309]: Its a ECO version of 1DX MARK II , excellent camera in crop sensor
+            - generic [ref=f1e1314]:
+              - paragraph [ref=f1e1315]: Avijit Dasgupta
+              - paragraph [ref=f1e1320]: Certified Buyer
+              - paragraph [ref=f1e1321]: Oct, 2018
+      - generic [ref=f1e1322]:
+        - generic [ref=f1e1323]:
+          - generic [ref=f1e1325]:
+            - img "BuyLuxe Mini HD Digital Camera for Kids – Photo & Video Camera Toy 13MP DSLR Camera"
+          - generic [ref=f1e1326]:
+            - link "2. BuyLuxe Mini HD Digital Cam... 3.5 13 Ratings&1 Reviews ₹550 65% off" [ref=f1e1327] [cursor=pointer]:
+              - /url: /buyluxe-mini-hd-digital-camera-kids-photo-video-toy-13mp-dslr/p/itm602821a5a1dd6?pid=CAMHKVH5FPBYXRXK&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=f1e1328]: 2. BuyLuxe Mini HD Digital Cam...
+              - generic [ref=f1e1330]:
+                - generic [ref=f1e1331]: "3.5"
+                - generic [ref=f1e1333]:
+                  - text: 13 Ratings
+                  - generic [ref=f1e1334]: "&1 Reviews"
+              - generic [ref=f1e1336]:
+                - generic [ref=f1e1337]: ₹550
+                - generic [ref=f1e1338]: 65% off
+            - list [ref=f1e1339]:
+              - listitem [ref=f1e1340]: "Effective Pixels: 13 MP"
+              - listitem [ref=f1e1341]: "Optical Zoom: 0"
+              - listitem [ref=f1e1342]: "Sensor Type: CCD | LCD Size: 6 inch"
+        - generic [ref=f1e1343]:
+          - generic [ref=f1e1344]: Most Helpful Review
+          - generic [ref=f1e1346]:
+            - generic [ref=f1e1347]:
+              - generic [ref=f1e1348]: "5"
+              - paragraph [ref=f1e1350]: Fabulous!
+            - generic [ref=f1e1351]: Good
+            - generic [ref=f1e1356]:
+              - paragraph [ref=f1e1357]: C S JHA
+              - paragraph [ref=f1e1362]: Certified Buyer
+              - paragraph [ref=f1e1363]: 1 month ago
+        - generic [ref=f1e1364]:
+          - generic [ref=f1e1365]: Recent Review
+          - generic [ref=f1e1367]:
+            - generic [ref=f1e1368]:
+              - generic [ref=f1e1369]: "5"
+              - paragraph [ref=f1e1371]: Fabulous!
+            - generic [ref=f1e1372]: Good
+            - generic [ref=f1e1377]:
+              - paragraph [ref=f1e1378]: C S JHA
+              - paragraph [ref=f1e1383]: Certified Buyer
+              - paragraph [ref=f1e1384]: 1 month ago
+      - generic [ref=f1e1385]:
+        - generic [ref=f1e1386]:
+          - generic [ref=f1e1388]:
+            - img "NIKON D7000 Series D7500 DSLR Camera Body with 18-140 mm Lens"
+          - generic [ref=f1e1389]:
+            - link "3. NIKON D7000 Series D7500 DS... 4.5 1,231 Ratings&154 Reviews ₹78,990 16% off" [ref=f1e1390] [cursor=pointer]:
+              - /url: /nikon-d7000-series-d7500-dslr-camera-body-18-140-mm-lens/p/itme57c2bb8a03cd?pid=DLLFCKK6GET9EEDC&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=f1e1391]: 3. NIKON D7000 Series D7500 DS...
+              - generic [ref=f1e1393]:
+                - generic [ref=f1e1394]: "4.5"
+                - generic [ref=f1e1396]:
+                  - text: 1,231 Ratings
+                  - generic [ref=f1e1397]: "&154 Reviews"
+              - generic [ref=f1e1399]:
+                - generic [ref=f1e1400]: ₹78,990
+                - generic [ref=f1e1401]: 16% off
+            - list [ref=f1e1402]:
+              - listitem [ref=f1e1403]: 4K UHD, Follow your passion wherever it leads, Flagship Image Quality., AF and Capturing Ability (Superb shooting performance for moving subjects), Cinematic Versatility (Get your creative world in motion with stunning 4K UHD video and advanced filmmaking features), In-camera Time-lapse Movies, Power Aperture Control, Active D-Lighting, Electronic VR, Versatile Sound Controls, Designed for Performance., Touch-operation, Tilting 3.2-in. LCD Monitor, Precision Optical Viewfinder, Comfortable Grip Design, Built-in Bluetooth and Wi-Fi Connectivity
+              - listitem [ref=f1e1404]: "Effective Pixels: 20.9 MP"
+              - listitem [ref=f1e1405]: "Sensor Type: CMOS"
+        - generic [ref=f1e1406]:
+          - generic [ref=f1e1407]: Most Helpful Review
+          - generic [ref=f1e1409]:
+            - generic [ref=f1e1410]:
+              - generic [ref=f1e1411]: "5"
+              - paragraph [ref=f1e1413]: Brilliant
+            - generic [ref=f1e1416]:
+              - generic [ref=f1e1417]: One of the finest Dslr camera i hv ever seen... No need to think.. jst go and grab it.. if u need a high mid rnge Semi professional Camera go for it.. no wil...
+              - generic [ref=f1e1418] [cursor=pointer]: Read full review
+            - generic [ref=f1e1420]:
+              - paragraph [ref=f1e1421]: Satyajit Acharjee
+              - paragraph [ref=f1e1426]: Certified Buyer
+              - paragraph [ref=f1e1427]: Aug, 2019
+        - generic [ref=f1e1428]:
+          - generic [ref=f1e1429]: Recent Review
+          - generic [ref=f1e1431]:
+            - generic [ref=f1e1432]:
+              - generic [ref=f1e1433]: "5"
+              - paragraph [ref=f1e1435]: Perfect product!
+            - generic [ref=f1e1436]: For wedding and event very nice cameraCan u have budget friendly and good choice for fresh to seniors
+            - generic [ref=f1e1441]:
+              - paragraph [ref=f1e1442]: Flipkart Customer
+              - paragraph [ref=f1e1447]: Certified Buyer
+              - paragraph [ref=f1e1448]: 3 months ago
+      - generic [ref=f1e1449]:
+        - generic [ref=f1e1450]:
+          - generic [ref=f1e1452]:
+            - img "Canon EOS R50 Mirrorless Camera Body with RF - S 18 - 45 mm f/4.5 - 6.3 IS STM"
+          - generic [ref=f1e1453]:
+            - link "4. Canon EOS R50 Mirrorless Ca... 4.6 1,288 Ratings&151 Reviews ₹67,990 10% off" [ref=f1e1454] [cursor=pointer]:
+              - /url: /canon-eos-r50-mirrorless-camera-body-rf-s-18-45-mm-f-4-5-6-3-stm/p/itmfdd16b16cfce4?pid=DLLGN2WBD6HHBWWE&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=f1e1455]: 4. Canon EOS R50 Mirrorless Ca...
+              - generic [ref=f1e1457]:
+                - generic [ref=f1e1458]: "4.6"
+                - generic [ref=f1e1460]:
+                  - text: 1,288 Ratings
+                  - generic [ref=f1e1461]: "&151 Reviews"
+              - generic [ref=f1e1463]:
+                - generic [ref=f1e1464]: ₹67,990
+                - generic [ref=f1e1465]: 10% off
+            - list [ref=f1e1466]:
+              - listitem [ref=f1e1467]: 4K 30p (6K oversampled) & FHD 120p, Up to 15 frames per second & EOS iTR AF X, Shoot all angles, Dual Pixel CMOS Auto Focus II coupled, Capture more unmissable moments at 12fps3. Switch up to 15fps when using silent electronic shutter4., UHD 4K 30p video, SLOW MOTION FOR IMPACT, Enhanced streaming and video calls, SEAMLESS CONNECTIVITY, Bluetooth?and Wi-Fi connectivity enable easy remote shooting8.
+              - listitem [ref=f1e1468]: "Effective Pixels: 24.2 MP"
+              - listitem [ref=f1e1469]: "Sensor Type: CMOS"
+        - generic [ref=f1e1470]:
+          - generic [ref=f1e1471]: Most Helpful Review
+          - generic [ref=f1e1473]:
+            - generic [ref=f1e1474]:
+              - generic [ref=f1e1475]: "5"
+              - paragraph [ref=f1e1477]: Awesome
+            - generic [ref=f1e1480]:
+              - generic [ref=f1e1481]: Perfect for beginners, learning , casual shoot, professional. Satisfied with its performance and reliability. Compact in size easy to carry, kit lens is also...
+              - generic [ref=f1e1482] [cursor=pointer]: Read full review
+            - generic [ref=f1e1484]:
+              - paragraph [ref=f1e1485]: Hemant Kumar
+              - paragraph [ref=f1e1490]: Certified Buyer
+              - paragraph [ref=f1e1491]: Feb, 2025
+        - generic [ref=f1e1492]:
+          - generic [ref=f1e1493]: Recent Review
+          - generic [ref=f1e1495]:
+            - generic [ref=f1e1496]:
+              - generic [ref=f1e1497]: "5"
+              - paragraph [ref=f1e1499]: Terrific
+            - generic [ref=f1e1502]:
+              - generic [ref=f1e1503]: Great camera. Worth the money. Got the 2 kit lens bundle and its really great. The quality, processing power, autofocus, everything is wonderful. Though for ...
+              - generic [ref=f1e1504] [cursor=pointer]: Read full review
+            - generic [ref=f1e1506]:
+              - paragraph [ref=f1e1507]: Samprit Chaudhury
+              - paragraph [ref=f1e1512]: Certified Buyer
+              - paragraph [ref=f1e1513]: 1 month ago
+      - generic [ref=f1e1514]:
+        - generic [ref=f1e1515]:
+          - generic [ref=f1e1517]:
+            - img "Toy Imagine Top Quality Kids Digital Camera 3.0MP, 1080P Mini Video Camera DSLR Camera USB Rechargeable & Portable Camera"
+          - generic [ref=f1e1518]:
+            - link "5. Toy Imagine Top Quality Kid... 3.1 17 Ratings&2 Reviews ₹542 69% off" [ref=f1e1519] [cursor=pointer]:
+              - /url: /toy-imagine-top-quality-kids-digital-camera-3-0mp-1080p-mini-video-dslr-usb-rechargeable-portable/p/itma28cadb9918bb?pid=DLLHHYD8NNH6VGZH&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=f1e1520]: 5. Toy Imagine Top Quality Kid...
+              - generic [ref=f1e1522]:
+                - generic [ref=f1e1523]: "3.1"
+                - generic [ref=f1e1525]:
+                  - text: 17 Ratings
+                  - generic [ref=f1e1526]: "&2 Reviews"
+              - generic [ref=f1e1528]:
+                - generic [ref=f1e1529]: ₹542
+                - generic [ref=f1e1530]: 69% off
+            - list [ref=f1e1531]:
+              - listitem [ref=f1e1532]: "Effective Pixels: 3 MP"
+              - listitem [ref=f1e1533]: "Sensor Type: CCD"
+              - listitem [ref=f1e1534]: "1080"
+        - generic [ref=f1e1535]:
+          - generic [ref=f1e1536]: Most Helpful Review
+          - generic [ref=f1e1538]:
+            - generic [ref=f1e1539]:
+              - generic [ref=f1e1540]: "1"
+              - paragraph [ref=f1e1542]: Did not meet expectations
+            - generic [ref=f1e1543]: The battery is draining quickly.
+            - generic [ref=f1e1548]:
+              - paragraph [ref=f1e1549]: Komal Kumar Sahu
+              - paragraph [ref=f1e1554]: Certified Buyer
+              - paragraph [ref=f1e1555]: 3 months ago
+        - generic [ref=f1e1556]:
+          - generic [ref=f1e1557]: Recent Review
+          - generic [ref=f1e1559]:
+            - generic [ref=f1e1560]:
+              - generic [ref=f1e1561]: "1"
+              - paragraph [ref=f1e1563]: Did not meet expectations
+            - generic [ref=f1e1564]: The battery is draining quickly.
+            - generic [ref=f1e1569]:
+              - paragraph [ref=f1e1570]: Komal Kumar Sahu
+              - paragraph [ref=f1e1575]: Certified Buyer
+              - paragraph [ref=f1e1576]: 3 months ago
+  - contentinfo [ref=f1e1577]:
+    - generic [ref=f1e1579]:
+      - generic [ref=f1e1580]:
+        - generic [ref=f1e1581]:
+          - generic [ref=f1e1582]: ABOUT
+          - link "Contact Us" [ref=f1e1583] [cursor=pointer]:
+            - /url: /helpcentre?otracker=footer_navlinks
+          - link "About Us" [ref=f1e1584] [cursor=pointer]:
+            - /url: https://corporate.flipkart.net/corporate-home
+          - link "Careers" [ref=f1e1585] [cursor=pointer]:
+            - /url: https://www.flipkartcareers.com/?otracker=footer_navlinks
+          - link "Flipkart Stories" [ref=f1e1586] [cursor=pointer]:
+            - /url: http://stories.flipkart.com/?otracker=footer_navlinks
+          - link "Press" [ref=f1e1587] [cursor=pointer]:
+            - /url: http://stories.flipkart.com/category/top-stories/news/
+          - link "Corporate Information" [ref=f1e1588] [cursor=pointer]:
+            - /url: /corporate-information
+        - generic [ref=f1e1589]:
+          - generic [ref=f1e1590]: GROUP COMPANIES
+          - link "Myntra" [ref=f1e1591] [cursor=pointer]:
+            - /url: https://www.myntra.com/
+          - link "Cleartrip" [ref=f1e1592] [cursor=pointer]:
+            - /url: https://www.cleartrip.com/
+          - link "Shopsy" [ref=f1e1593] [cursor=pointer]:
+            - /url: https://www.shopsy.in/
+        - generic [ref=f1e1594]:
+          - generic [ref=f1e1595]: HELP
+          - link "Payments" [ref=f1e1596] [cursor=pointer]:
+            - /url: /pages/payments
+          - link "Shipping" [ref=f1e1597] [cursor=pointer]:
+            - /url: /pages/shipping
+          - link "Cancellation & Returns" [ref=f1e1598] [cursor=pointer]:
+            - /url: /helpcentre?catalog=55c9c6edb000002e002c1701&view=CATALOG
+          - link "FAQ" [ref=f1e1599] [cursor=pointer]:
+            - /url: /helpcentre?catalog=55c9c8e2b0000023002c1702&view=CATALOG
+        - generic [ref=f1e1600]:
+          - generic [ref=f1e1601]: CONSUMER POLICY
+          - link "Cancellation & Returns" [ref=f1e1602] [cursor=pointer]:
+            - /url: /pages/returnpolicy?otracker=footer_navlinks
+          - link "Terms Of Use" [ref=f1e1603] [cursor=pointer]:
+            - /url: /pages/terms?otracker=footer_navlinks
+          - link "Security" [ref=f1e1604] [cursor=pointer]:
+            - /url: /pages/paymentsecurity?otracker=footer_navlinks
+          - link "Privacy" [ref=f1e1605] [cursor=pointer]:
+            - /url: /pages/privacypolicy?otracker=footer_navlinks
+          - link "Sitemap" [ref=f1e1606] [cursor=pointer]:
+            - /url: /sitemap?otracker=footer_navlinks
+          - link "Grievance Redressal" [ref=f1e1607] [cursor=pointer]:
+            - /url: /pages/grievance-redressal-mechanism?otracker=footer_navlinks
+          - link "EPR Compliance" [ref=f1e1608] [cursor=pointer]:
+            - /url: /pages/ewaste-compliance-tnc?otracker=footer_navlinks
+          - link "FSSAI Food Safety Connect App" [ref=f1e1609] [cursor=pointer]:
+            - /url: https://fssai.gov.in/cms/food-safety-connect.php
+        - generic [ref=f1e1611]:
+          - generic [ref=f1e1612]: "Mail Us:"
+          - generic [ref=f1e1615]:
+            - paragraph [ref=f1e1616]: Flipkart Internet Private Limited,
+            - paragraph [ref=f1e1617]: Buildings Alyssa, Begonia &
+            - paragraph [ref=f1e1618]: Clove Embassy Tech Village,
+            - paragraph [ref=f1e1619]: Outer Ring Road, Devarabeesanahalli Village,
+            - paragraph [ref=f1e1620]: Bengaluru, 560103,
+            - paragraph [ref=f1e1621]: Karnataka, India
+          - generic [ref=f1e1622]: Social
+          - generic [ref=f1e1623]:
+            - link [ref=f1e1625] [cursor=pointer]:
+              - /url: https://www.facebook.com/flipkart
+            - link [ref=f1e1628] [cursor=pointer]:
+              - /url: https://www.twitter.com/flipkart
+            - link [ref=f1e1631] [cursor=pointer]:
+              - /url: https://www.youtube.com/flipkart
+            - link [ref=f1e1634] [cursor=pointer]:
+              - /url: https://www.instagram.com/flipkart
+        - generic [ref=f1e1637]:
+          - generic [ref=f1e1638]: "Registered Office Address:"
+          - generic [ref=f1e1641]:
+            - paragraph [ref=f1e1642]: Flipkart Internet Private Limited,
+            - paragraph [ref=f1e1643]: Buildings Alyssa, Begonia &
+            - paragraph [ref=f1e1644]: Clove Embassy Tech Village,
+            - paragraph [ref=f1e1645]: Outer Ring Road, Devarabeesanahalli Village,
+            - paragraph [ref=f1e1646]: Bengaluru, 560103,
+            - paragraph [ref=f1e1647]: Karnataka, India
+            - paragraph [ref=f1e1648]: "CIN : U51109KA2012PTC066107"
+            - paragraph [ref=f1e1649]:
+              - text: "Telephone:"
+              - link "044-45614700" [ref=f1e1650] [cursor=pointer]:
+                - /url: tel:044-45614700
+              - text: /
+              - link "044-67415800" [ref=f1e1651] [cursor=pointer]:
+                - /url: tel:044-67415800
+      - generic [ref=f1e1653]:
+        - link "Become a Seller" [ref=f1e1656] [cursor=pointer]:
+          - /url: https://seller.flipkart.com/?utm_source=fkwebsite&utm_medium=websitedirect
+        - generic [ref=f1e1657]: Advertise
+        - link "Gift Cards" [ref=f1e1661] [cursor=pointer]:
+          - /url: /the-gift-card-store?otracker=footer_navlinks
+        - link "Help Center" [ref=f1e1664] [cursor=pointer]:
+          - /url: /helpcentre?otracker=footer_navlinks
+        - generic [ref=f1e1665]: © 2007-2026 Flipkart.com
+```

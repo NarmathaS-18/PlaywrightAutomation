@@ -1,0 +1,1208 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: flipkart.spec.js >> Verify search functionality in flipkart
+- Location: tests\flipkart.spec.js:3:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('heading').getByText('more')
+    - locator resolved to <div class="v1zwn21u v1zwn24 _1psv1zeb9 _1psv1ze0">more</div>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f1e3]:
+  - generic [ref=f1e7]:
+    - generic [ref=f1e9]:
+      - link [ref=f1e10] [cursor=pointer]:
+        - /url: /
+        - img "Flipkart" [ref=f1e11]
+      - link "Explore Plus" [ref=f1e12] [cursor=pointer]:
+        - /url: /plus
+    - generic [ref=f1e16]:
+      - textbox "Search for products, brands and more" [ref=f1e18]: Laptop
+      - button [ref=f1e19] [cursor=pointer]
+    - link "Login" [ref=f1e28] [cursor=pointer]:
+      - /url: /login?ret=%2Fsearch%3Fq%3DLaptop%26otracker%3Dsearch%26otracker1%3Dsearch%26marketplace%3DFLIPKART%26as-show%3Doff%26as%3Doff
+    - link "Become a Seller" [ref=f1e30] [cursor=pointer]:
+      - /url: https://seller.flipkart.com/sell-online/?utm_source=fkwebsite&utm_medium=websitedirect
+    - generic [ref=f1e32]: More
+    - link "Cart" [ref=f1e42] [cursor=pointer]:
+      - /url: /viewcart?exploreMode=true&preference=FLIPKART
+  - generic [ref=f1e50]:
+    - generic [ref=f1e51] [cursor=pointer]: Electronics
+    - generic [ref=f1e54] [cursor=pointer]: TVs & Appliances
+    - generic [ref=f1e57] [cursor=pointer]: Men
+    - generic [ref=f1e60] [cursor=pointer]: Women
+    - generic [ref=f1e63] [cursor=pointer]: Baby & Kids
+    - generic [ref=f1e66] [cursor=pointer]: Home & Furniture
+    - generic [ref=f1e69] [cursor=pointer]: Sports, Books & More
+    - link "Flights" [ref=f1e72] [cursor=pointer]:
+      - /url: /travel/flights?otracker=nmenu_Flights
+    - link "Offer Zone" [ref=f1e73] [cursor=pointer]:
+      - /url: /offers-list/top-deals?screen=dynamic&pk=themeViews%3DDT-OMU-A2%3ADT-OMU~widgetType%3DdealCard~contentType%3Dneo&otracker=nmenu_offer-zone
+  - generic [ref=f1e74]:
+    - generic [ref=f1e75]:
+      - generic [ref=f1e77]:
+        - generic [ref=f1e79]:
+          - generic [ref=f1e80]: Filters
+          - generic [ref=f1e84]:
+            - generic [ref=f1e85]: CATEGORIES
+            - generic [ref=f1e87]:
+              - img [ref=f1e89] [cursor=pointer]
+              - link "Computers" [ref=f1e91] [cursor=pointer]:
+                - /url: /computers/pr?sid=6bo&q=Laptop&otracker=categorytree
+            - generic [ref=f1e93]:
+              - img [ref=f1e95] [cursor=pointer]
+              - link "Laptops" [ref=f1e97] [cursor=pointer]:
+                - /url: /laptops/pr?sid=6bo,b5g&q=Laptop&otracker=categorytree
+          - generic [ref=f1e98]: Brand
+          - generic [ref=f1e103]:
+            - generic [ref=f1e104] [cursor=pointer]: Processor
+            - generic [ref=f1e108]:
+              - generic [ref=f1e109]:
+                - textbox "Search Processor" [ref=f1e115]
+                - generic "Core i5" [ref=f1e116] [cursor=pointer]
+                - generic "Core i3" [ref=f1e121] [cursor=pointer]
+                - generic "Core i7" [ref=f1e126] [cursor=pointer]
+                - generic "Ryzen 7 Quad Core" [ref=f1e131] [cursor=pointer]
+                - generic "Ryzen 5 Quad Core" [ref=f1e136] [cursor=pointer]
+                - generic "Core i9" [ref=f1e141] [cursor=pointer]
+              - generic [ref=f1e146] [cursor=pointer]: 65 MORE
+          - generic [ref=f1e147]: RAM Capacity
+          - generic [ref=f1e152]: SSD Capacity
+          - generic [ref=f1e157]: Processor Generation
+          - generic [ref=f1e162]: Screen Size
+          - generic [ref=f1e167]: Type
+          - generic [ref=f1e172]: Graphic Processor Name
+          - generic [ref=f1e177]: Operating System
+          - generic [ref=f1e182]: Processor Brand
+          - generic [ref=f1e187]:
+            - generic [ref=f1e188]: Price
+            - generic [ref=f1e198]:
+              - generic [ref=f1e199] [cursor=pointer]
+              - generic [ref=f1e206]:
+                - generic [ref=f1e207]: .
+                - generic [ref=f1e208]: .
+                - generic [ref=f1e209]: .
+                - generic [ref=f1e210]: .
+                - generic [ref=f1e211]: .
+                - generic [ref=f1e212]: .
+                - generic: .
+            - generic [ref=f1e213]:
+              - combobox [ref=f1e215]:
+                - option "Min" [selected]
+                - option "₹20000"
+                - option "₹40000"
+                - option "₹50000"
+                - option "₹60000"
+                - option "₹75000"
+              - generic [ref=f1e216]: to
+              - combobox [ref=f1e218]:
+                - option "₹20000"
+                - option "₹40000"
+                - option "₹50000"
+                - option "₹60000"
+                - option "₹75000"
+                - option "₹75000+" [selected]
+          - generic [ref=f1e219]: Features
+          - generic [ref=f1e224]: Storage Type
+          - generic [ref=f1e229]: Usage
+          - generic [ref=f1e234]: RAM Capacity
+          - generic [ref=f1e239]: Dedicated Graphics Memory
+          - generic [ref=f1e244]: Weight
+          - generic [ref=f1e249]: Usage
+          - generic [ref=f1e254]: Ram Type
+          - generic [ref=f1e259]:
+            - generic [ref=f1e260] [cursor=pointer]: Customer Ratings
+            - generic [ref=f1e265]:
+              - generic "4★ & above" [ref=f1e266] [cursor=pointer]
+              - generic "3★ & above" [ref=f1e271] [cursor=pointer]
+              - generic "2★ & above" [ref=f1e276] [cursor=pointer]
+              - generic "1★ & above" [ref=f1e281] [cursor=pointer]
+          - generic [ref=f1e286]: Discount
+          - generic [ref=f1e291]:
+            - generic [ref=f1e292] [cursor=pointer]
+            - generic [ref=f1e297]: "?"
+          - generic [ref=f1e299]: Touch Screen
+          - generic [ref=f1e304]: Graphics Memory Type
+          - generic [ref=f1e309]: Country Of Origin
+          - generic [ref=f1e314]:
+            - generic [ref=f1e315] [cursor=pointer]: Offers
+            - generic [ref=f1e320]:
+              - generic "Buy More, Save More" [ref=f1e321] [cursor=pointer]
+              - generic "Special Price" [ref=f1e326] [cursor=pointer]
+          - generic [ref=f1e331]: Hard Disk Capacity
+          - generic [ref=f1e336]: New Arrivals
+          - generic [ref=f1e341]: Availability
+          - generic [ref=f1e346]: GST Invoice Available
+        - link "Need help? Help me decide Buying Guide" [ref=f1e352] [cursor=pointer]:
+          - /url: /buying-guide/laptops?sid=6bo,b5g&otracker=bg_from_browse_lhs
+          - generic [ref=f1e353]: Need help?
+          - generic [ref=f1e354]: Help me decide
+          - img "Buying Guide" [ref=f1e357]
+      - generic [ref=f1e358]:
+        - generic [ref=f1e361]:
+          - generic [ref=f1e362]:
+            - link "Home" [ref=f1e364] [cursor=pointer]:
+              - /url: /
+            - link "Computers" [ref=f1e368] [cursor=pointer]:
+              - /url: /computers/pr?sid=6bo&marketplace=FLIPKART
+            - link "Laptops" [ref=f1e372] [cursor=pointer]:
+              - /url: /laptops/pr?sid=6bo,b5g&marketplace=FLIPKART
+          - generic [ref=f1e373]: Showing 1 – 24 of 2,238 results for "Laptop"
+          - generic [ref=f1e374]:
+            - generic [ref=f1e375]: Sort By
+            - generic [ref=f1e376]: Relevance
+            - generic [ref=f1e377] [cursor=pointer]: Popularity
+            - generic [ref=f1e378] [cursor=pointer]: Price -- Low to High
+            - generic [ref=f1e379] [cursor=pointer]: Price -- High to Low
+            - generic [ref=f1e380] [cursor=pointer]: Newest First
+        - link "Lenovo IdeaPad Slim 3 Next Gen AI PC WUXGA IPS Copilot + PC with 1Yr ADP Snapdragon X - (16 GB/512 GB ... Add to Compare Lenovo IdeaPad Slim 3 Next Gen AI PC WUXGA IPS Copilot + PC with 1Yr ADP Snapdragon X - (16 GB/512 GB ... 4.4 1,326 Ratings & 152 Reviews • Snapdragon X Processor • 16 GB LPDDR5X RAM • Windows 11 Home Operating System • 512 GB SSD • 38.86 cm (15.3 Inch) Display • Office Home 2024 • 1 Year Onsite Warranty ₹63,990 ₹93,490 31% off Upto ₹48,250 Off on Exchange Bank Offer" [active] [ref=f1e385] [cursor=pointer]:
+          - /url: /lenovo-ideapad-slim-3-next-gen-ai-pc-wuxga-ips-copilot-1yr-adp-snapdragon-x-16-gb-512-gb-ssd-windows-11-home-15q8x10-thin-light-laptop/p/itm973f2ace963c8?pid=COMHDMJYDGBTMJXG&lid=LSTCOMHDMJYDGBTMJXG112MJM&marketplace=FLIPKART&q=Laptop&store=6bo%2Fb5g&srno=s_1_1&otracker=search&otracker1=search&fm=organic&iid=en_yNu6bVwohDoR5nmEFR2aDKWR-oLLgQ0dNx-g3mT13wE6OpIHqOvUFg3JemdoBAiwIJbmruLapW50pLx61JJxQToy6dqcsONN0tEncInmwkXui5FVTIpwYfm2rWx4mBNA&ppt=dynamic&ppn=Login%3ACategory_List&ssid=rpaptztjhc0000001790674366379&qH=146bdebb324a64d3&ov_redirect=true
+          - generic [ref=f1e386]:
+            - img "Lenovo IdeaPad Slim 3 Next Gen AI PC WUXGA IPS Copilot + PC with 1Yr ADP Snapdragon X - (16 GB/512 GB ..." [ref=f1e390]
+            - generic [ref=f1e391]: Add to Compare
+          - generic [ref=f1e401]:
+            - generic [ref=f1e402]:
+              - generic [ref=f1e407]: Lenovo IdeaPad Slim 3 Next Gen AI PC WUXGA IPS Copilot + PC with 1Yr ADP Snapdragon X - (16 GB/512 GB ...
+              - generic [ref=f1e408]:
+                - generic [ref=f1e409]: "4.4"
+                - generic [ref=f1e412]: 1,326 Ratings & 152 Reviews
+              - list [ref=f1e415]:
+                - listitem [ref=f1e416]: • Snapdragon X Processor
+                - listitem [ref=f1e417]: • 16 GB LPDDR5X RAM
+                - listitem [ref=f1e418]: • Windows 11 Home Operating System
+                - listitem [ref=f1e419]: • 512 GB SSD
+                - listitem [ref=f1e420]: • 38.86 cm (15.3 Inch) Display
+                - listitem [ref=f1e421]: • Office Home 2024
+                - listitem [ref=f1e422]: • 1 Year Onsite Warranty
+            - generic [ref=f1e423]:
+              - generic [ref=f1e425]:
+                - generic [ref=f1e426]: ₹63,990
+                - generic [ref=f1e427]: ₹93,490
+                - generic [ref=f1e428]: 31% off
+              - generic [ref=f1e432]:
+                - generic [ref=f1e433]: Upto
+                - generic [ref=f1e434]: ₹48,250
+                - generic [ref=f1e435]: Off on Exchange
+              - generic [ref=f1e436]: Bank Offer
+        - link "ASUS Vivobook S14 Flip OLED (2026) with Touch Screen, Snapdragon Snapdragon X - (8 GB/512 GB SSD/Windo... Add to Compare ASUS Vivobook S14 Flip OLED (2026) with Touch Screen, Snapdragon Snapdragon X - (8 GB/512 GB SSD/Windo... • Snapdragon Snapdragon X Processor • 8 GB LPDDR5X RAM • Windows 11 Home Operating System • 512 GB SSD • 35.56 cm (14 inch) Touchscreen Display • MSO 2024 for lifetime + Microsoft 365 Basic with 100GB Cloud Storage for 1 Year, McAfee 1 year • 1 Year Onsite Service ₹1,02,990 ₹1,67,990 38% off Upto ₹58,650 Off on Exchange Bank Offer" [ref=f1e443] [cursor=pointer]:
+          - /url: /asus-vivobook-s14-flip-oled-2026-touch-screen-snapdragon-x-8-gb-512-gb-ssd-windows-11-home-tp5408qa-u2093ws-thin-light-laptop/p/itm512b17a336037?pid=COMHPXZQCZGP35HE&lid=LSTCOMHPXZQCZGP35HEB4MOZ0&marketplace=FLIPKART&q=Laptop&store=6bo%2Fb5g&srno=s_1_2&otracker=search&otracker1=search&fm=organic&iid=en_yNu6bVwohDoR5nmEFR2aDKWR-oLLgQ0dNx-g3mT13wEqcIKDPs-guo861N1v9T41I49dhMN8bxhqM5nOxuj-qXIgRj0wW7C-alH1gj1xEC_ui5FVTIpwYfm2rWx4mBNA&ppt=dynamic&ppn=Login%3ACategory_List&ssid=rpaptztjhc0000001790674366379&qH=146bdebb324a64d3&ov_redirect=true
+          - generic [ref=f1e444]:
+            - img "ASUS Vivobook S14 Flip OLED (2026) with Touch Screen, Snapdragon Snapdragon X - (8 GB/512 GB SSD/Windo..." [ref=f1e448]
+            - generic [ref=f1e449]: Add to Compare
+          - generic [ref=f1e459]:
+            - generic [ref=f1e460]:
+              - generic [ref=f1e465]: ASUS Vivobook S14 Flip OLED (2026) with Touch Screen, Snapdragon Snapdragon X - (8 GB/512 GB SSD/Windo...
+              - list [ref=f1e467]:
+                - listitem [ref=f1e468]: • Snapdragon Snapdragon X Processor
+                - listitem [ref=f1e469]: • 8 GB LPDDR5X RAM
+                - listitem [ref=f1e470]: • Windows 11 Home Operating System
+                - listitem [ref=f1e471]: • 512 GB SSD
+                - listitem [ref=f1e472]: • 35.56 cm (14 inch) Touchscreen Display
+                - listitem [ref=f1e473]: • MSO 2024 for lifetime + Microsoft 365 Basic with 100GB Cloud Storage for 1 Year, McAfee 1 year
+                - listitem [ref=f1e474]: • 1 Year Onsite Service
+            - generic [ref=f1e475]:
+              - generic [ref=f1e477]:
+                - generic [ref=f1e478]: ₹1,02,990
+                - generic [ref=f1e479]: ₹1,67,990
+                - generic [ref=f1e480]: 38% off
+              - generic [ref=f1e484]:
+                - generic [ref=f1e485]: Upto
+                - generic [ref=f1e486]: ₹58,650
+                - generic [ref=f1e487]: Off on Exchange
+              - generic [ref=f1e488]: Bank Offer
+        - link "Acer Aspire Lite Metal (2026) AMD Ryzen 3 Quad Core 5400U - (8 GB/256 GB SSD/Windows 11 Home) AL15-41 ... Add to Compare Acer Aspire Lite Metal (2026) AMD Ryzen 3 Quad Core 5400U - (8 GB/256 GB SSD/Windows 11 Home) AL15-41 ... 4.1 960 Ratings & 94 Reviews • AMD Ryzen 3 Quad Core Processor • 8 GB DDR4 RAM • Windows 11 Operating System • 256 GB SSD • 39.62 cm (15.6 Inch) Display • 1 Year Carry-in Warranty ₹36,990 ₹52,990 30% off Big Billion Days Price Upto ₹30,050 Off on Exchange" [ref=f1e495] [cursor=pointer]:
+          - /url: /acer-aspire-lite-metal-2026-amd-ryzen-3-quad-core-5400u-8-gb-256-gb-ssd-windows-11-home-al15-41-thin-light-laptop/p/itm1bc0bcb4598e7?pid=COMH2TPSVSGUVKY4&lid=LSTCOMH2TPSVSGUVKY4MJENVA&marketplace=FLIPKART&q=Laptop&store=6bo%2Fb5g&srno=s_1_3&otracker=search&otracker1=search&fm=organic&iid=5d23e9a6-3142-495b-896f-87a1b044a451.COMH2TPSVSGUVKY4.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=rpaptztjhc0000001790674366379&qH=146bdebb324a64d3&ov_redirect=true
+          - generic [ref=f1e496]:
+            - img "Acer Aspire Lite Metal (2026) AMD Ryzen 3 Quad Core 5400U - (8 GB/256 GB SSD/Windows 11 Home) AL15-41 ..." [ref=f1e500]
+            - generic [ref=f1e501]: Add to Compare
+          - generic [ref=f1e511]:
+            - generic [ref=f1e512]:
+              - generic [ref=f1e513]: Acer Aspire Lite Metal (2026) AMD Ryzen 3 Quad Core 5400U - (8 GB/256 GB SSD/Windows 11 Home) AL15-41 ...
+              - generic [ref=f1e514]:
+                - generic [ref=f1e515]: "4.1"
+                - generic [ref=f1e518]: 960 Ratings & 94 Reviews
+              - list [ref=f1e521]:
+                - listitem [ref=f1e522]: • AMD Ryzen 3 Quad Core Processor
+                - listitem [ref=f1e523]: • 8 GB DDR4 RAM
+                - listitem [ref=f1e524]: • Windows 11 Operating System
+                - listitem [ref=f1e525]: • 256 GB SSD
+                - listitem [ref=f1e526]: • 39.62 cm (15.6 Inch) Display
+                - listitem [ref=f1e527]: • 1 Year Carry-in Warranty
+            - generic [ref=f1e528]:
+              - generic [ref=f1e530]:
+                - generic [ref=f1e531]: ₹36,990
+                - generic [ref=f1e532]: ₹52,990
+                - generic [ref=f1e533]: 30% off
+              - generic [ref=f1e536]: Big Billion Days Price
+              - generic [ref=f1e540]:
+                - generic [ref=f1e541]: Upto
+                - generic [ref=f1e542]: ₹30,050
+                - generic [ref=f1e543]: Off on Exchange
+        - link "Neopticon Intel Celeron Dual Core N4020 Intel Celeron Dual Core Intel - (4 GB/128 GB SSD/Windows 11 Ho... Add to Compare Neopticon Intel Celeron Dual Core N4020 Intel Celeron Dual Core Intel - (4 GB/128 GB SSD/Windows 11 Ho... 3.4 36 Ratings & 3 Reviews • Intel Celeron Dual Core Processor • 4 GB LPDDR4 RAM • 64 bit Windows 11 Operating System • 128 GB SSD • 35.81 cm (14.1 inch) Display • YES • 1 Year ₹22,690 ₹29,590 23% off Only 3 left Bank Offer" [ref=f1e548] [cursor=pointer]:
+          - /url: /neopticon-intel-celeron-dual-core-n4020-4-gb-128-gb-ssd-windows-11-home-bbn40412814-laptop/p/itm8249747b82715?pid=COMHZK89YGZAHHZC&lid=LSTCOMHZK89YGZAHHZCZ44OFQ&marketplace=FLIPKART&q=Laptop&store=6bo%2Fb5g&srno=s_1_4&otracker=search&otracker1=search&fm=organic&iid=5d23e9a6-3142-495b-896f-87a1b044a451.COMHZK89YGZAHHZC.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=rpaptztjhc0000001790674366379&qH=146bdebb324a64d3&ov_redirect=true
+          - generic [ref=f1e549]:
+            - img "Neopticon Intel Celeron Dual Core N4020 Intel Celeron Dual Core Intel - (4 GB/128 GB SSD/Windows 11 Ho..." [ref=f1e553]
+            - generic [ref=f1e554]: Add to Compare
+          - generic [ref=f1e564]:
+            - generic [ref=f1e565]:
+              - generic [ref=f1e566]: Neopticon Intel Celeron Dual Core N4020 Intel Celeron Dual Core Intel - (4 GB/128 GB SSD/Windows 11 Ho...
+              - generic [ref=f1e567]:
+                - generic [ref=f1e568]: "3.4"
+                - generic [ref=f1e571]: 36 Ratings & 3 Reviews
+              - list [ref=f1e574]:
+                - listitem [ref=f1e575]: • Intel Celeron Dual Core Processor
+                - listitem [ref=f1e576]: • 4 GB LPDDR4 RAM
+                - listitem [ref=f1e577]: • 64 bit Windows 11 Operating System
+                - listitem [ref=f1e578]: • 128 GB SSD
+                - listitem [ref=f1e579]: • 35.81 cm (14.1 inch) Display
+                - listitem [ref=f1e580]: • YES
+                - listitem [ref=f1e581]: • 1 Year
+            - generic [ref=f1e582]:
+              - generic [ref=f1e584]:
+                - generic [ref=f1e585]: ₹22,690
+                - generic [ref=f1e586]: ₹29,590
+                - generic [ref=f1e587]: 23% off
+              - generic [ref=f1e588]: Only 3 left
+              - generic [ref=f1e591]: Bank Offer
+        - link "Lenovo 100e Chromebook Gen 4 MediaTek Kompanio 520 - (4 GB/32 GB EMMC Storage/Chrome OS) 100e Chromebo... Add to Compare Lenovo 100e Chromebook Gen 4 MediaTek Kompanio 520 - (4 GB/32 GB EMMC Storage/Chrome OS) 100e Chromebo... 4 3,643 Ratings & 352 Reviews • MediaTek Kompanio 520 Processor • 4 GB LPDDR4X RAM • Chrome Operating System • 29.46 cm (11.6 Inch) Display • 1 Year Carry-in Warranty ₹15,990 ₹21,543 25% off Value 365 Only 3 left" [ref=f1e598] [cursor=pointer]:
+          - /url: /lenovo-100e-chromebook-gen-4-mediatek-kompanio-520-4-gb-32-gb-emmc-storage-chrome-os/p/itm041aea27f1885?pid=COMHA9FK8YXVUUWA&lid=LSTCOMHA9FK8YXVUUWAAREQMZ&marketplace=FLIPKART&q=Laptop&store=6bo%2Fb5g&srno=s_1_5&otracker=search&otracker1=search&fm=organic&iid=5d23e9a6-3142-495b-896f-87a1b044a451.COMHA9FK8YXVUUWA.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=rpaptztjhc0000001790674366379&qH=146bdebb324a64d3&ov_redirect=true
+          - generic [ref=f1e599]:
+            - img "Lenovo 100e Chromebook Gen 4 MediaTek Kompanio 520 - (4 GB/32 GB EMMC Storage/Chrome OS) 100e Chromebo..." [ref=f1e603]
+            - generic [ref=f1e604]: Add to Compare
+          - generic [ref=f1e614]:
+            - generic [ref=f1e615]:
+              - generic [ref=f1e616]: Lenovo 100e Chromebook Gen 4 MediaTek Kompanio 520 - (4 GB/32 GB EMMC Storage/Chrome OS) 100e Chromebo...
+              - generic [ref=f1e617]:
+                - generic [ref=f1e618]: "4"
+                - generic [ref=f1e621]: 3,643 Ratings & 352 Reviews
+              - list [ref=f1e624]:
+                - listitem [ref=f1e625]: • MediaTek Kompanio 520 Processor
+                - listitem [ref=f1e626]: • 4 GB LPDDR4X RAM
+                - listitem [ref=f1e627]: • Chrome Operating System
+                - listitem [ref=f1e628]: • 29.46 cm (11.6 Inch) Display
+                - listitem [ref=f1e629]: • 1 Year Carry-in Warranty
+            - generic [ref=f1e630]:
+              - generic [ref=f1e632]:
+                - generic [ref=f1e633]: ₹15,990
+                - generic [ref=f1e634]: ₹21,543
+                - generic [ref=f1e635]: 25% off
+              - generic [ref=f1e638]: Value 365
+              - generic [ref=f1e641]: Only 3 left
+        - link "Samsung Galaxy Book4 Edge Series Copilot AI-PC Full Metal Chasis Snapdragon X - (16 GB/512 GB SSD/Wind... Add to Compare Samsung Galaxy Book4 Edge Series Copilot AI-PC Full Metal Chasis Snapdragon X - (16 GB/512 GB SSD/Wind... 4.4 3,350 Ratings & 414 Reviews • Snapdragon X Processor • 16 GB LPDDR5X RAM • 64 bit Windows 11 Operating System • 512 GB SSD • 39.62 cm (15.6 Inch) Display • MS Office Home and Student 2024 • 1 Year Manufacturer Warranty for Laptop and 6 Months for In-Box Accessories ₹69,990 ₹92,390 24% off Super Deals Upto ₹48,250 Off on Exchange" [ref=f1e648] [cursor=pointer]:
+          - /url: /samsung-galaxy-book4-edge-series-copilot-ai-pc-full-metal-chasis-snapdragon-x-16-gb-512-gb-ssd-windows-11-home-np750xqb-ka1in-thin-light-laptop/p/itm1d61ec8d90cc7?pid=COMHE4ATFWNVHXHS&lid=LSTCOMHE4ATFWNVHXHSIHS0FO&marketplace=FLIPKART&q=Laptop&store=6bo%2Fb5g&srno=s_1_6&otracker=search&otracker1=search&fm=organic&iid=en_yNu6bVwohDoR5nmEFR2aDKWR-oLLgQ0dNx-g3mT13wFFtF_DDBM9AUChQLeDUKrZPxHhtq-4klxsiSRmfntKX_t9fi23K0LN9kOHDh6zxmp9lm2JNMoQM1vL8Befhfib&ppt=dynamic&ppn=Login%3ACategory_List&ssid=rpaptztjhc0000001790674366379&qH=146bdebb324a64d3&ov_redirect=true
+          - generic [ref=f1e649]:
+            - img "Samsung Galaxy Book4 Edge Series Copilot AI-PC Full Metal Chasis Snapdragon X - (16 GB/512 GB SSD/Wind..." [ref=f1e653]
+            - generic [ref=f1e654]: Add to Compare
+          - generic [ref=f1e664]:
+            - generic [ref=f1e665]:
+              - generic [ref=f1e670]: Samsung Galaxy Book4 Edge Series Copilot AI-PC Full Metal Chasis Snapdragon X - (16 GB/512 GB SSD/Wind...
+              - generic [ref=f1e671]:
+                - generic [ref=f1e672]: "4.4"
+                - generic [ref=f1e675]: 3,350 Ratings & 414 Reviews
+              - list [ref=f1e678]:
+                - listitem [ref=f1e679]: • Snapdragon X Processor
+                - listitem [ref=f1e680]: • 16 GB LPDDR5X RAM
+                - listitem [ref=f1e681]: • 64 bit Windows 11 Operating System
+                - listitem [ref=f1e682]: • 512 GB SSD
+                - listitem [ref=f1e683]: • 39.62 cm (15.6 Inch) Display
+                - listitem [ref=f1e684]: • MS Office Home and Student 2024
+                - listitem [ref=f1e685]: • 1 Year Manufacturer Warranty for Laptop and 6 Months for In-Box Accessories
+            - generic [ref=f1e686]:
+              - generic [ref=f1e688]:
+                - generic [ref=f1e689]: ₹69,990
+                - generic [ref=f1e690]: ₹92,390
+                - generic [ref=f1e691]: 24% off
+              - generic [ref=f1e694]: Super Deals
+              - generic [ref=f1e698]:
+                - generic [ref=f1e699]: Upto
+                - generic [ref=f1e700]: ₹48,250
+                - generic [ref=f1e701]: Off on Exchange
+        - link "HP 15 (2025) AMD Athlon Dual Core 7120U - (8 GB/256 GB SSD/Windows 11 Home) 15 Thin and Light Laptop Add to Compare HP 15 (2025) AMD Athlon Dual Core 7120U - (8 GB/256 GB SSD/Windows 11 Home) 15 Thin and Light Laptop 4.1 385 Ratings & 37 Reviews • AMD Athlon Dual Core Processor • 8 GB DDR4 RAM • 64 bit Windows 11 Home Operating System • 256 GB SSD • 39.62 cm (15.6 Inch) Display • Microsoft Office 2021, Windows 11 Home • 1 Year Onsite Warranty ₹47,905 ₹49,990 4% off Only few left Bank Offer" [ref=f1e706] [cursor=pointer]:
+          - /url: /hp-15-2025-amd-athlon-dual-core-7120u-8-gb-256-gb-ssd-windows-11-home-thin-light-laptop/p/itm356259fbc5fcb?pid=COMHCPHGZXJWVNX2&lid=LSTCOMHCPHGZXJWVNX2OMIMXX&marketplace=FLIPKART&q=Laptop&store=6bo%2Fb5g&srno=s_1_7&otracker=search&otracker1=search&fm=organic&iid=5d23e9a6-3142-495b-896f-87a1b044a451.COMHCPHGZXJWVNX2.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=rpaptztjhc0000001790674366379&qH=146bdebb324a64d3&ov_redirect=true
+          - generic [ref=f1e707]:
+            - img "HP 15 (2025) AMD Athlon Dual Core 7120U - (8 GB/256 GB SSD/Windows 11 Home) 15 Thin and Light Laptop" [ref=f1e711]
+            - generic [ref=f1e712]: Add to Compare
+          - generic [ref=f1e722]:
+            - generic [ref=f1e723]:
+              - generic [ref=f1e724]: HP 15 (2025) AMD Athlon Dual Core 7120U - (8 GB/256 GB SSD/Windows 11 Home) 15 Thin and Light Laptop
+              - generic [ref=f1e725]:
+                - generic [ref=f1e726]: "4.1"
+                - generic [ref=f1e729]: 385 Ratings & 37 Reviews
+              - list [ref=f1e732]:
+                - listitem [ref=f1e733]: • AMD Athlon Dual Core Processor
+                - listitem [ref=f1e734]: • 8 GB DDR4 RAM
+                - listitem [ref=f1e735]: • 64 bit Windows 11 Home Operating System
+                - listitem [ref=f1e736]: • 256 GB SSD
+                - listitem [ref=f1e737]: • 39.62 cm (15.6 Inch) Display
+                - listitem [ref=f1e738]: • Microsoft Office 2021, Windows 11 Home
+                - listitem [ref=f1e739]: • 1 Year Onsite Warranty
+            - generic [ref=f1e740]:
+              - generic [ref=f1e742]:
+                - generic [ref=f1e743]: ₹47,905
+                - generic [ref=f1e744]: ₹49,990
+                - generic [ref=f1e745]: 4% off
+              - generic [ref=f1e748]: Only few left
+              - generic [ref=f1e751]: Bank Offer
+        - link "ASUS Vivobook 15 Intel Core i3 12th Gen 1215U - (8 GB/512 GB SSD/Windows 11 Home) X1502ZA-EJ953WS Thin... Add to Compare ASUS Vivobook 15 Intel Core i3 12th Gen 1215U - (8 GB/512 GB SSD/Windows 11 Home) X1502ZA-EJ953WS Thin... 4.3 7,696 Ratings & 617 Reviews • Intel Core i3 Processor (12th Gen) • 8 GB DDR4 RAM • 64 bit Windows 11 Operating System • 512 GB SSD • 39.62 cm (15.6 Inch) Display • 1 Year Onsite Warranty ₹34,990 ₹56,990 38% off Only 3 left Upto ₹26,900 Off on Exchange" [ref=f1e758] [cursor=pointer]:
+          - /url: /asus-vivobook-15-intel-core-i3-12th-gen-1215u-8-gb-512-gb-ssd-windows-11-home-x1502za-ej953ws-thin-light-laptop/p/itm3b11f9400fcd8?pid=COMGZKHQ8BXZFBUT&lid=LSTCOMGZKHQ8BXZFBUTEXWMPL&marketplace=FLIPKART&q=Laptop&store=6bo%2Fb5g&srno=s_1_8&otracker=search&otracker1=search&fm=organic&iid=5d23e9a6-3142-495b-896f-87a1b044a451.COMGZKHQ8BXZFBUT.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=rpaptztjhc0000001790674366379&qH=146bdebb324a64d3&ov_redirect=true
+          - generic [ref=f1e759]:
+            - img "ASUS Vivobook 15 Intel Core i3 12th Gen 1215U - (8 GB/512 GB SSD/Windows 11 Home) X1502ZA-EJ953WS Thin..." [ref=f1e763]
+            - generic [ref=f1e764]: Add to Compare
+          - generic [ref=f1e774]:
+            - generic [ref=f1e775]:
+              - generic [ref=f1e776]: ASUS Vivobook 15 Intel Core i3 12th Gen 1215U - (8 GB/512 GB SSD/Windows 11 Home) X1502ZA-EJ953WS Thin...
+              - generic [ref=f1e777]:
+                - generic [ref=f1e778]: "4.3"
+                - generic [ref=f1e781]: 7,696 Ratings & 617 Reviews
+              - list [ref=f1e784]:
+                - listitem [ref=f1e785]: • Intel Core i3 Processor (12th Gen)
+                - listitem [ref=f1e786]: • 8 GB DDR4 RAM
+                - listitem [ref=f1e787]: • 64 bit Windows 11 Operating System
+                - listitem [ref=f1e788]: • 512 GB SSD
+                - listitem [ref=f1e789]: • 39.62 cm (15.6 Inch) Display
+                - listitem [ref=f1e790]: • 1 Year Onsite Warranty
+            - generic [ref=f1e791]:
+              - generic [ref=f1e793]:
+                - generic [ref=f1e794]: ₹34,990
+                - generic [ref=f1e795]: ₹56,990
+                - generic [ref=f1e796]: 38% off
+              - generic [ref=f1e797]: Only 3 left
+              - generic [ref=f1e801]:
+                - generic [ref=f1e802]: Upto
+                - generic [ref=f1e803]: ₹26,900
+                - generic [ref=f1e804]: Off on Exchange
+        - link "Primebook 2 Pro (2026) in-Built AI MediaTek Helio G99 (MT8781) - (8 GB/128 GB/Android 15) PBG9914128#4... Add to Compare Primebook 2 Pro (2026) in-Built AI MediaTek Helio G99 (MT8781) - (8 GB/128 GB/Android 15) PBG9914128#4... 4.4 1,948 Ratings & 682 Reviews • MediaTek Helio G99 (MT8781) Processor • 8 GB LPDDR4X RAM • 64 bit Android Operating System • 35.81 cm (14.1 Inch) Display • 1 Year Onsite Warranty ₹28,490 ₹39,990 28% off Only few left Upto ₹22,425 Off on Exchange" [ref=f1e809] [cursor=pointer]:
+          - /url: /primebook-2-pro-2026-in-built-ai-mediatek-helio-g99-mt8781-8-gb-128-gb-android-15-pbg9914128-4278c-laptop/p/itmdbf8db6a6f79a?pid=COMHDGD5FH6NZPHD&lid=LSTCOMHDGD5FH6NZPHD567UTY&marketplace=FLIPKART&q=Laptop&store=6bo%2Fb5g&srno=s_1_9&otracker=search&otracker1=search&fm=organic&iid=5d23e9a6-3142-495b-896f-87a1b044a451.COMHDGD5FH6NZPHD.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=rpaptztjhc0000001790674366379&qH=146bdebb324a64d3&ov_redirect=true
+          - generic [ref=f1e810]:
+            - img "Primebook 2 Pro (2026) in-Built AI MediaTek Helio G99 (MT8781) - (8 GB/128 GB/Android 15) PBG9914128#4..." [ref=f1e814]
+            - generic [ref=f1e815]: Add to Compare
+          - generic [ref=f1e825]:
+            - generic [ref=f1e826]:
+              - generic [ref=f1e827]: Primebook 2 Pro (2026) in-Built AI MediaTek Helio G99 (MT8781) - (8 GB/128 GB/Android 15) PBG9914128#4...
+              - generic [ref=f1e828]:
+                - generic [ref=f1e829]: "4.4"
+                - generic [ref=f1e832]: 1,948 Ratings & 682 Reviews
+              - list [ref=f1e835]:
+                - listitem [ref=f1e836]: • MediaTek Helio G99 (MT8781) Processor
+                - listitem [ref=f1e837]: • 8 GB LPDDR4X RAM
+                - listitem [ref=f1e838]: • 64 bit Android Operating System
+                - listitem [ref=f1e839]: • 35.81 cm (14.1 Inch) Display
+                - listitem [ref=f1e840]: • 1 Year Onsite Warranty
+            - generic [ref=f1e841]:
+              - generic [ref=f1e843]:
+                - generic [ref=f1e844]: ₹28,490
+                - generic [ref=f1e845]: ₹39,990
+                - generic [ref=f1e846]: 28% off
+              - generic [ref=f1e849]: Only few left
+              - generic [ref=f1e853]:
+                - generic [ref=f1e854]: Upto
+                - generic [ref=f1e855]: ₹22,425
+                - generic [ref=f1e856]: Off on Exchange
+        - link "Samsung Galaxy Book5 AI Metal Intel Core Ultra 5 225U - (16 GB/512 GB SSD/Windows 11 Home) NP750XHD Th... Add to Compare Samsung Galaxy Book5 AI Metal Intel Core Ultra 5 225U - (16 GB/512 GB SSD/Windows 11 Home) NP750XHD Th... 4.6 973 Ratings & 190 Reviews • Intel Core Ultra 5 Processor • 16 GB LPDDR5X RAM • 64 bit Windows 11 Operating System • 512 GB SSD • 39.62 cm (15.6 Inch) Display • MS Office Home and Student 2024 • 1 Year Manufacturer Warranty for Laptop and 6 Months for In-Box Accessories ₹86,990 ₹99,990 13% off Upto ₹58,650 Off on Exchange Bank Offer" [ref=f1e861] [cursor=pointer]:
+          - /url: /samsung-galaxy-book5-ai-metal-intel-core-ultra-5-225u-16-gb-512-gb-ssd-windows-11-home-np750xhd-thin-light-laptop/p/itmc33d2563d0ffc?pid=COMHE4ATPCZ9FXRP&lid=LSTCOMHE4ATPCZ9FXRP7N1GVG&marketplace=FLIPKART&q=Laptop&store=6bo%2Fb5g&srno=s_1_10&otracker=search&otracker1=search&fm=organic&iid=5d23e9a6-3142-495b-896f-87a1b044a451.COMHE4ATPCZ9FXRP.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=rpaptztjhc0000001790674366379&qH=146bdebb324a64d3&ov_redirect=true
+          - generic [ref=f1e862]:
+            - img "Samsung Galaxy Book5 AI Metal Intel Core Ultra 5 225U - (16 GB/512 GB SSD/Windows 11 Home) NP750XHD Th..." [ref=f1e866]
+            - generic [ref=f1e867]: Add to Compare
+          - generic [ref=f1e877]:
+            - generic [ref=f1e878]:
+              - generic [ref=f1e879]: Samsung Galaxy Book5 AI Metal Intel Core Ultra 5 225U - (16 GB/512 GB SSD/Windows 11 Home) NP750XHD Th...
+              - generic [ref=f1e880]:
+                - generic [ref=f1e881]: "4.6"
+                - generic [ref=f1e884]: 973 Ratings & 190 Reviews
+              - list [ref=f1e887]:
+                - listitem [ref=f1e888]: • Intel Core Ultra 5 Processor
+                - listitem [ref=f1e889]: • 16 GB LPDDR5X RAM
+                - listitem [ref=f1e890]: • 64 bit Windows 11 Operating System
+                - listitem [ref=f1e891]: • 512 GB SSD
+                - listitem [ref=f1e892]: • 39.62 cm (15.6 Inch) Display
+                - listitem [ref=f1e893]: • MS Office Home and Student 2024
+                - listitem [ref=f1e894]: • 1 Year Manufacturer Warranty for Laptop and 6 Months for In-Box Accessories
+            - generic [ref=f1e895]:
+              - generic [ref=f1e897]:
+                - generic [ref=f1e898]: ₹86,990
+                - generic [ref=f1e899]: ₹99,990
+                - generic [ref=f1e900]: 13% off
+              - generic [ref=f1e904]:
+                - generic [ref=f1e905]: Upto
+                - generic [ref=f1e906]: ₹58,650
+                - generic [ref=f1e907]: Off on Exchange
+              - generic [ref=f1e908]: Bank Offer
+        - link "HP Omnibook 3 Next Gen AI PC Snapdragon X - (8 GB/512 GB SSD/Windows 11 Home) 14-hz0056QU Laptop Add to Compare HP Omnibook 3 Next Gen AI PC Snapdragon X - (8 GB/512 GB SSD/Windows 11 Home) 14-hz0056QU Laptop 4.3 107 Ratings & 19 Reviews • Snapdragon X Processor • 8 GB LPDDR5X RAM • 64 bit Windows 11 Home Operating System • 512 GB SSD • 35.56 cm (14 inch) Display • MS Office Home 2024, 1 year Microsoft 365 Basic Free, 100 GB Dropbox 3 months, Xbox Game Pass 2M • 1 Year Onsite Service ₹62,990 ₹1,45,525 56% off Upto ₹45,950 Off on Exchange Bank Offer" [ref=f1e915] [cursor=pointer]:
+          - /url: /hp-omnibook-3-next-gen-ai-pc-snapdragon-x-8-gb-512-gb-ssd-windows-11-home-14-hz0056qu-laptop/p/itmfbff241a073bf?pid=COMHR3J3CCHHP7VZ&lid=LSTCOMHR3J3CCHHP7VZPAKMAO&marketplace=FLIPKART&q=Laptop&store=6bo%2Fb5g&srno=s_1_11&otracker=search&otracker1=search&fm=organic&iid=en_yNu6bVwohDoR5nmEFR2aDKWR-oLLgQ0dNx-g3mT13wHec9Sv8hAxpDQWrMSQnwAtQTierU5bfJob64sI0Rt3v41-kXsH8yFK8SIZdWL-lox9lm2JNMoQM1vL8Befhfib&ppt=dynamic&ppn=Login%3ACategory_List&ssid=rpaptztjhc0000001790674366379&qH=146bdebb324a64d3&ov_redirect=true
+          - generic [ref=f1e916]:
+            - img "HP Omnibook 3 Next Gen AI PC Snapdragon X - (8 GB/512 GB SSD/Windows 11 Home) 14-hz0056QU Laptop" [ref=f1e920]
+            - generic [ref=f1e921]: Add to Compare
+          - generic [ref=f1e931]:
+            - generic [ref=f1e932]:
+              - generic [ref=f1e937]: HP Omnibook 3 Next Gen AI PC Snapdragon X - (8 GB/512 GB SSD/Windows 11 Home) 14-hz0056QU Laptop
+              - generic [ref=f1e938]:
+                - generic [ref=f1e939]: "4.3"
+                - generic [ref=f1e942]: 107 Ratings & 19 Reviews
+              - list [ref=f1e945]:
+                - listitem [ref=f1e946]: • Snapdragon X Processor
+                - listitem [ref=f1e947]: • 8 GB LPDDR5X RAM
+                - listitem [ref=f1e948]: • 64 bit Windows 11 Home Operating System
+                - listitem [ref=f1e949]: • 512 GB SSD
+                - listitem [ref=f1e950]: • 35.56 cm (14 inch) Display
+                - listitem [ref=f1e951]: • MS Office Home 2024, 1 year Microsoft 365 Basic Free, 100 GB Dropbox 3 months, Xbox Game Pass 2M
+                - listitem [ref=f1e952]: • 1 Year Onsite Service
+            - generic [ref=f1e953]:
+              - generic [ref=f1e955]:
+                - generic [ref=f1e956]: ₹62,990
+                - generic [ref=f1e957]: ₹1,45,525
+                - generic [ref=f1e958]: 56% off
+              - generic [ref=f1e960]:
+                - generic [ref=f1e961]: Upto
+                - generic [ref=f1e962]: ₹45,950
+                - generic [ref=f1e963]: Off on Exchange
+              - generic [ref=f1e964]: Bank Offer
+        - link "Lenovo IdeaPad Slim 3 with 1Yr ADP Snapdragon X - (16 GB/1 TB SSD/Windows 11 Home) 15Q8X10 Thin and Li... Add to Compare Lenovo IdeaPad Slim 3 with 1Yr ADP Snapdragon X - (16 GB/1 TB SSD/Windows 11 Home) 15Q8X10 Thin and Li... 4.2 131 Ratings & 12 Reviews • Snapdragon X Processor • 16 GB LPDDR5X RAM • Windows 11 Home Operating System • 1 TB SSD • 38.86 cm (15.3 inch) Display • Office Home 2024 • 1 Year Onsite Service ₹72,990 ₹91,890 20% off Big Billion Days Price Upto ₹55,800 Off on Exchange" [ref=f1e971] [cursor=pointer]:
+          - /url: /lenovo-ideapad-slim-3-1yr-adp-snapdragon-x-16-gb-1-tb-ssd-windows-11-home-15q8x10-thin-light-laptop/p/itm9f8e47980095e?pid=COMHHDEES8YNG4HP&lid=LSTCOMHHDEES8YNG4HPLTP30H&marketplace=FLIPKART&q=Laptop&store=6bo%2Fb5g&srno=s_1_12&otracker=search&otracker1=search&fm=organic&iid=en_yNu6bVwohDoR5nmEFR2aDKWR-oLLgQ0dNx-g3mT13wHV_zbtvtu8JRW4iTviDgDD43ScjOzp_yem1_fflM6s9-0j3C0YKT0tCJSPRruKffKrCMbUPtMVuB8aGa_3ybKZ&ppt=dynamic&ppn=Login%3ACategory_List&ssid=rpaptztjhc0000001790674366379&qH=146bdebb324a64d3&ov_redirect=true
+          - generic [ref=f1e972]:
+            - img "Lenovo IdeaPad Slim 3 with 1Yr ADP Snapdragon X - (16 GB/1 TB SSD/Windows 11 Home) 15Q8X10 Thin and Li..." [ref=f1e976]
+            - generic [ref=f1e977]: Add to Compare
+          - generic [ref=f1e987]:
+            - generic [ref=f1e988]:
+              - generic [ref=f1e993]: Lenovo IdeaPad Slim 3 with 1Yr ADP Snapdragon X - (16 GB/1 TB SSD/Windows 11 Home) 15Q8X10 Thin and Li...
+              - generic [ref=f1e994]:
+                - generic [ref=f1e995]: "4.2"
+                - generic [ref=f1e998]: 131 Ratings & 12 Reviews
+              - list [ref=f1e1001]:
+                - listitem [ref=f1e1002]: • Snapdragon X Processor
+                - listitem [ref=f1e1003]: • 16 GB LPDDR5X RAM
+                - listitem [ref=f1e1004]: • Windows 11 Home Operating System
+                - listitem [ref=f1e1005]: • 1 TB SSD
+                - listitem [ref=f1e1006]: • 38.86 cm (15.3 inch) Display
+                - listitem [ref=f1e1007]: • Office Home 2024
+                - listitem [ref=f1e1008]: • 1 Year Onsite Service
+            - generic [ref=f1e1009]:
+              - generic [ref=f1e1011]:
+                - generic [ref=f1e1012]: ₹72,990
+                - generic [ref=f1e1013]: ₹91,890
+                - generic [ref=f1e1014]: 20% off
+              - generic [ref=f1e1017]: Big Billion Days Price
+              - generic [ref=f1e1021]:
+                - generic [ref=f1e1022]: Upto
+                - generic [ref=f1e1023]: ₹55,800
+                - generic [ref=f1e1024]: Off on Exchange
+        - link "DELL 15 AMD Ryzen 5 Quad Core 7520U - (8 GB/512 GB SSD/Windows 11 Home) 3535 Thin and Light Laptop Add to Compare DELL 15 AMD Ryzen 5 Quad Core 7520U - (8 GB/512 GB SSD/Windows 11 Home) 3535 Thin and Light Laptop 4.1 79 Ratings & 7 Reviews • AMD Ryzen 5 Quad Core Processor • 8 GB LPDDR5 RAM • Windows 11 Operating System • 512 GB SSD • 39.62 cm (15.6 Inch) Display • My Dell (Dell Power Manager,Dell Support Assist) • 1 Year Onsite Hardware Service ₹54,990 ₹65,999 16% off Only few left Bank Offer" [ref=f1e1029] [cursor=pointer]:
+          - /url: /dell-15-amd-ryzen-5-quad-core-7520u-8-gb-512-gb-ssd-windows-11-home-3535-thin-light-laptop/p/itm277d6cd7790c2?pid=COMH8EPFHZRD9YDC&lid=LSTCOMH8EPFHZRD9YDC4B574M&marketplace=FLIPKART&q=Laptop&store=6bo%2Fb5g&srno=s_1_13&otracker=search&otracker1=search&fm=organic&iid=5d23e9a6-3142-495b-896f-87a1b044a451.COMH8EPFHZRD9YDC.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=rpaptztjhc0000001790674366379&qH=146bdebb324a64d3&ov_redirect=true
+          - generic [ref=f1e1030]:
+            - img "DELL 15 AMD Ryzen 5 Quad Core 7520U - (8 GB/512 GB SSD/Windows 11 Home) 3535 Thin and Light Laptop" [ref=f1e1034]
+            - generic [ref=f1e1035]: Add to Compare
+          - generic [ref=f1e1045]:
+            - generic [ref=f1e1046]:
+              - generic [ref=f1e1047]: DELL 15 AMD Ryzen 5 Quad Core 7520U - (8 GB/512 GB SSD/Windows 11 Home) 3535 Thin and Light Laptop
+              - generic [ref=f1e1048]:
+                - generic [ref=f1e1049]: "4.1"
+                - generic [ref=f1e1052]: 79 Ratings & 7 Reviews
+              - list [ref=f1e1055]:
+                - listitem [ref=f1e1056]: • AMD Ryzen 5 Quad Core Processor
+                - listitem [ref=f1e1057]: • 8 GB LPDDR5 RAM
+                - listitem [ref=f1e1058]: • Windows 11 Operating System
+                - listitem [ref=f1e1059]: • 512 GB SSD
+                - listitem [ref=f1e1060]: • 39.62 cm (15.6 Inch) Display
+                - listitem [ref=f1e1061]: • My Dell (Dell Power Manager,Dell Support Assist)
+                - listitem [ref=f1e1062]: • 1 Year Onsite Hardware Service
+            - generic [ref=f1e1063]:
+              - generic [ref=f1e1065]:
+                - generic [ref=f1e1066]: ₹54,990
+                - generic [ref=f1e1067]: ₹65,999
+                - generic [ref=f1e1068]: 16% off
+              - generic [ref=f1e1069]: Only few left
+              - generic [ref=f1e1072]: Bank Offer
+        - link "MICROSOFT Surface Laptop 13\" with Microsoft 365 for 6 Months* Snapdragon X Plus - (16 GB/256 GB SSD/Wi... Coming Soon Add to Compare MICROSOFT Surface Laptop 13\" with Microsoft 365 for 6 Months* Snapdragon X Plus - (16 GB/256 GB SSD/Wi... 4.4 55 Ratings & 9 Reviews • Snapdragon X Plus Processor • 16 GB LPDDR5X RAM • 64 bit Windows 11 Operating System • 256 GB SSD • 33.02 cm (13 Inch) Touchscreen Display • NA • 1 Year Limited Warranty ₹1,00,999" [ref=f1e1079] [cursor=pointer]:
+          - /url: /microsoft-surface-laptop-13-365-6-months-snapdragon-x-plus-16-gb-256-gb-ssd-windows-11-home-ep2-36996/p/itm4ee6305cb4b81?pid=COMHHX3YYWYQHH2K&lid=LSTCOMHHX3YYWYQHH2KGKKUUB&marketplace=FLIPKART&q=Laptop&store=6bo%2Fb5g&srno=s_1_14&otracker=search&otracker1=search&fm=organic&iid=5d23e9a6-3142-495b-896f-87a1b044a451.COMHHX3YYWYQHH2K.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=rpaptztjhc0000001790674366379&qH=146bdebb324a64d3&ov_redirect=true
+          - generic [ref=f1e1080]:
+            - generic [ref=f1e1081]:
+              - img "MICROSOFT Surface Laptop 13\" with Microsoft 365 for 6 Months* Snapdragon X Plus - (16 GB/256 GB SSD/Wi..." [ref=f1e1084]
+              - generic: Coming Soon
+            - generic [ref=f1e1085]: Add to Compare
+          - generic [ref=f1e1095]:
+            - generic [ref=f1e1096]:
+              - generic [ref=f1e1097]: MICROSOFT Surface Laptop 13" with Microsoft 365 for 6 Months* Snapdragon X Plus - (16 GB/256 GB SSD/Wi...
+              - generic [ref=f1e1098]:
+                - generic [ref=f1e1099]: "4.4"
+                - generic [ref=f1e1102]: 55 Ratings & 9 Reviews
+              - list [ref=f1e1105]:
+                - listitem [ref=f1e1106]: • Snapdragon X Plus Processor
+                - listitem [ref=f1e1107]: • 16 GB LPDDR5X RAM
+                - listitem [ref=f1e1108]: • 64 bit Windows 11 Operating System
+                - listitem [ref=f1e1109]: • 256 GB SSD
+                - listitem [ref=f1e1110]: • 33.02 cm (13 Inch) Touchscreen Display
+                - listitem [ref=f1e1111]: • NA
+                - listitem [ref=f1e1112]: • 1 Year Limited Warranty
+            - generic [ref=f1e1113]: ₹1,00,999
+        - link "Thomson NEO Core Series Intel Core i3 12th Gen 1215U - (8 GB/512 GB SSD/Windows 11 Home) IN-N15I Thin ... Add to Compare Thomson NEO Core Series Intel Core i3 12th Gen 1215U - (8 GB/512 GB SSD/Windows 11 Home) IN-N15I Thin ... 3.7 153 Ratings & 39 Reviews • Intel Core i3 Processor (12th Gen) • 8 GB LPDDR4 RAM • Windows 11 Operating System • 512 GB SSD • 39.62 cm (15.6 Inch) Display • 1 Year Onsite warranty ₹44,990 Only 4 left Upto ₹33,550 Off on Exchange" [ref=f1e1123] [cursor=pointer]:
+          - /url: /thomson-neo-core-series-intel-i3-12th-gen-1215u-8-gb-512-gb-ssd-windows-11-home-in-n15i-thin-light-laptop/p/itm707312182fa98?pid=COMGXXF2QXYGZUH6&lid=LSTCOMGXXF2QXYGZUH6SEKKHK&marketplace=FLIPKART&q=Laptop&store=6bo%2Fb5g&srno=s_1_15&otracker=search&otracker1=search&fm=organic&iid=5d23e9a6-3142-495b-896f-87a1b044a451.COMGXXF2QXYGZUH6.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=rpaptztjhc0000001790674366379&qH=146bdebb324a64d3&ov_redirect=true
+          - generic [ref=f1e1124]:
+            - img "Thomson NEO Core Series Intel Core i3 12th Gen 1215U - (8 GB/512 GB SSD/Windows 11 Home) IN-N15I Thin ..." [ref=f1e1128]
+            - generic [ref=f1e1129]: Add to Compare
+          - generic [ref=f1e1139]:
+            - generic [ref=f1e1140]:
+              - generic [ref=f1e1141]: Thomson NEO Core Series Intel Core i3 12th Gen 1215U - (8 GB/512 GB SSD/Windows 11 Home) IN-N15I Thin ...
+              - generic [ref=f1e1142]:
+                - generic [ref=f1e1143]: "3.7"
+                - generic [ref=f1e1146]: 153 Ratings & 39 Reviews
+              - list [ref=f1e1149]:
+                - listitem [ref=f1e1150]: • Intel Core i3 Processor (12th Gen)
+                - listitem [ref=f1e1151]: • 8 GB LPDDR4 RAM
+                - listitem [ref=f1e1152]: • Windows 11 Operating System
+                - listitem [ref=f1e1153]: • 512 GB SSD
+                - listitem [ref=f1e1154]: • 39.62 cm (15.6 Inch) Display
+                - listitem [ref=f1e1155]: • 1 Year Onsite warranty
+            - generic [ref=f1e1156]:
+              - generic [ref=f1e1157]: ₹44,990
+              - generic [ref=f1e1162]: Only 4 left
+              - generic [ref=f1e1166]:
+                - generic [ref=f1e1167]: Upto
+                - generic [ref=f1e1168]: ₹33,550
+                - generic [ref=f1e1169]: Off on Exchange
+        - link "Acer Aspire 3 Intel Core i5 13th Gen 1334U - (16 GB/512 GB SSD/Windows 11 Home) A324-53 Thin and Light... Add to Compare Acer Aspire 3 Intel Core i5 13th Gen 1334U - (16 GB/512 GB SSD/Windows 11 Home) A324-53 Thin and Light... 4.3 1,735 Ratings & 134 Reviews • Intel Core i5 Processor (13th Gen) • 16 GB DDR4 RAM • Windows 11 Operating System • 512 GB SSD • 35.56 cm (14 Inch) Display • 1 Year Carry-in Warranty ₹49,990 ₹66,999 25% off Only 2 left Upto ₹36,800 Off on Exchange" [ref=f1e1174] [cursor=pointer]:
+          - /url: /acer-aspire-3-intel-core-i5-13th-gen-1334u-16-gb-512-gb-ssd-windows-11-home-a324-53-thin-light-laptop/p/itm707770fddc7e9?pid=COMH4B6CGZKHKUV3&lid=LSTCOMH4B6CGZKHKUV37HVWQK&marketplace=FLIPKART&q=Laptop&store=6bo%2Fb5g&srno=s_1_16&otracker=search&otracker1=search&fm=organic&iid=5d23e9a6-3142-495b-896f-87a1b044a451.COMH4B6CGZKHKUV3.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=rpaptztjhc0000001790674366379&qH=146bdebb324a64d3&ov_redirect=true
+          - generic [ref=f1e1175]:
+            - img "Acer Aspire 3 Intel Core i5 13th Gen 1334U - (16 GB/512 GB SSD/Windows 11 Home) A324-53 Thin and Light..." [ref=f1e1179]
+            - generic [ref=f1e1180]: Add to Compare
+          - generic [ref=f1e1190]:
+            - generic [ref=f1e1191]:
+              - generic [ref=f1e1192]: Acer Aspire 3 Intel Core i5 13th Gen 1334U - (16 GB/512 GB SSD/Windows 11 Home) A324-53 Thin and Light...
+              - generic [ref=f1e1193]:
+                - generic [ref=f1e1194]: "4.3"
+                - generic [ref=f1e1197]: 1,735 Ratings & 134 Reviews
+              - list [ref=f1e1200]:
+                - listitem [ref=f1e1201]: • Intel Core i5 Processor (13th Gen)
+                - listitem [ref=f1e1202]: • 16 GB DDR4 RAM
+                - listitem [ref=f1e1203]: • Windows 11 Operating System
+                - listitem [ref=f1e1204]: • 512 GB SSD
+                - listitem [ref=f1e1205]: • 35.56 cm (14 Inch) Display
+                - listitem [ref=f1e1206]: • 1 Year Carry-in Warranty
+            - generic [ref=f1e1207]:
+              - generic [ref=f1e1209]:
+                - generic [ref=f1e1210]: ₹49,990
+                - generic [ref=f1e1211]: ₹66,999
+                - generic [ref=f1e1212]: 25% off
+              - generic [ref=f1e1215]: Only 2 left
+              - generic [ref=f1e1219]:
+                - generic [ref=f1e1220]: Upto
+                - generic [ref=f1e1221]: ₹36,800
+                - generic [ref=f1e1222]: Off on Exchange
+        - link "ASUS Vivobook 14 (2025) with Office 2024 + M365 Basic*, Backlit Keyboard, Snapdragon X - (16 GB/512 GB... Add to Compare ASUS Vivobook 14 (2025) with Office 2024 + M365 Basic*, Backlit Keyboard, Snapdragon X - (16 GB/512 GB... 4.4 987 Ratings & 97 Reviews • Snapdragon X Processor • 16 GB LPDDR5X RAM • Windows 11 Home Operating System • 512 GB SSD • 35.56 cm (14 Inch) Display • Microsoft Office Home 2024 (Lifetime Validity ) + Microsoft 365 Basic*(1-Year Validity), One-Month Membership of Adobe Creative Cloud All Apps • 1 Year Onsite Warranty ₹63,981 ₹1,22,990 47% off Upto ₹48,250 Off on Exchange Bank Offer" [ref=f1e1227] [cursor=pointer]:
+          - /url: /asus-vivobook-14-2025-office-2024-m365-basic-backlit-keyboard-snapdragon-x-16-gb-512-gb-ssd-windows-11-home-x1407qa-ly088ws-thin-light-laptop/p/itm50b9ac5b77ae0?pid=COMHEDHREAGHHPGG&lid=LSTCOMHEDHREAGHHPGG6CQ15O&marketplace=FLIPKART&q=Laptop&store=6bo%2Fb5g&srno=s_1_17&otracker=search&otracker1=search&fm=organic&iid=en_yNu6bVwohDoR5nmEFR2aDKWR-oLLgQ0dNx-g3mT13wHYoBxQQlCqXy2_LhLOQUjMuWEuQl51fnoKR53blVY0L3IVtdrH3s4t-pRJNufrkctnRqkkzfobXFGArwrK717O&ppt=dynamic&ppn=Login%3ACategory_List&ssid=rpaptztjhc0000001790674366379&qH=146bdebb324a64d3&ov_redirect=true
+          - generic [ref=f1e1228]:
+            - img "ASUS Vivobook 14 (2025) with Office 2024 + M365 Basic*, Backlit Keyboard, Snapdragon X - (16 GB/512 GB..." [ref=f1e1232]
+            - generic [ref=f1e1233]: Add to Compare
+          - generic [ref=f1e1243]:
+            - generic [ref=f1e1244]:
+              - generic [ref=f1e1249]: ASUS Vivobook 14 (2025) with Office 2024 + M365 Basic*, Backlit Keyboard, Snapdragon X - (16 GB/512 GB...
+              - generic [ref=f1e1250]:
+                - generic [ref=f1e1251]: "4.4"
+                - generic [ref=f1e1254]: 987 Ratings & 97 Reviews
+              - list [ref=f1e1257]:
+                - listitem [ref=f1e1258]: • Snapdragon X Processor
+                - listitem [ref=f1e1259]: • 16 GB LPDDR5X RAM
+                - listitem [ref=f1e1260]: • Windows 11 Home Operating System
+                - listitem [ref=f1e1261]: • 512 GB SSD
+                - listitem [ref=f1e1262]: • 35.56 cm (14 Inch) Display
+                - listitem [ref=f1e1263]: • Microsoft Office Home 2024 (Lifetime Validity ) + Microsoft 365 Basic*(1-Year Validity), One-Month Membership of Adobe Creative Cloud All Apps
+                - listitem [ref=f1e1264]: • 1 Year Onsite Warranty
+            - generic [ref=f1e1265]:
+              - generic [ref=f1e1267]:
+                - generic [ref=f1e1268]: ₹63,981
+                - generic [ref=f1e1269]: ₹1,22,990
+                - generic [ref=f1e1270]: 47% off
+              - generic [ref=f1e1274]:
+                - generic [ref=f1e1275]: Upto
+                - generic [ref=f1e1276]: ₹48,250
+                - generic [ref=f1e1277]: Off on Exchange
+              - generic [ref=f1e1278]: Bank Offer
+        - link "Lenovo 100e Chromebook Gen 4 MediaTek Kompanio 520 - (4 GB/32 GB EMMC Storage/Chrome OS) 100e Chromebo... Add to Compare Lenovo 100e Chromebook Gen 4 MediaTek Kompanio 520 - (4 GB/32 GB EMMC Storage/Chrome OS) 100e Chromebo... 4 3,643 Ratings & 352 Reviews • MediaTek Kompanio 520 Processor • 4 GB LPDDR4X RAM • Chrome Operating System • 29.46 cm (11.6 Inch) Display • 1 Year Carry-in Warranty ₹15,990 ₹21,543 25% off Value 365 Only 3 left" [ref=f1e1285] [cursor=pointer]:
+          - /url: /lenovo-100e-chromebook-gen-4-mediatek-kompanio-520-4-gb-32-gb-emmc-storage-chrome-os/p/itm041aea27f1885?pid=COMHA9FK8YXVUUWA&lid=LSTCOMHA9FK8YXVUUWAAREQMZ&marketplace=FLIPKART&q=Laptop&store=6bo%2Fb5g&srno=s_1_18&otracker=search&otracker1=search&fm=organic&iid=en_yNu6bVwohDoR5nmEFR2aDKWR-oLLgQ0dNx-g3mT13wE72ytnhm7QhPsNY487jv6_UZBHielcky4HdxwS8zqY_IOLLgrZY2ZkCav_ZOzUOmDtjOUs-yy6h2-YdT74lVIm9QWMJPI4egdmz5nn89L_DQ%3D%3D&ppt=dynamic&ppn=Login%3ACategory_List&ssid=rpaptztjhc0000001790674366379&qH=146bdebb324a64d3&ov_redirect=true
+          - generic [ref=f1e1286]:
+            - img "Lenovo 100e Chromebook Gen 4 MediaTek Kompanio 520 - (4 GB/32 GB EMMC Storage/Chrome OS) 100e Chromebo..." [ref=f1e1290]
+            - generic [ref=f1e1291]: Add to Compare
+          - generic [ref=f1e1301]:
+            - generic [ref=f1e1302]:
+              - generic [ref=f1e1307]: Lenovo 100e Chromebook Gen 4 MediaTek Kompanio 520 - (4 GB/32 GB EMMC Storage/Chrome OS) 100e Chromebo...
+              - generic [ref=f1e1308]:
+                - generic [ref=f1e1309]: "4"
+                - generic [ref=f1e1312]: 3,643 Ratings & 352 Reviews
+              - list [ref=f1e1315]:
+                - listitem [ref=f1e1316]: • MediaTek Kompanio 520 Processor
+                - listitem [ref=f1e1317]: • 4 GB LPDDR4X RAM
+                - listitem [ref=f1e1318]: • Chrome Operating System
+                - listitem [ref=f1e1319]: • 29.46 cm (11.6 Inch) Display
+                - listitem [ref=f1e1320]: • 1 Year Carry-in Warranty
+            - generic [ref=f1e1321]:
+              - generic [ref=f1e1323]:
+                - generic [ref=f1e1324]: ₹15,990
+                - generic [ref=f1e1325]: ₹21,543
+                - generic [ref=f1e1326]: 25% off
+              - generic [ref=f1e1329]: Value 365
+              - generic [ref=f1e1332]: Only 3 left
+        - link "Acer Aspire 14 Office 2024 + M365 Basic (i5 14th Gen) Intel Core 5 210 H - (16 GB/512 GB SSD/Windows 1... Add to Compare Acer Aspire 14 Office 2024 + M365 Basic (i5 14th Gen) Intel Core 5 210 H - (16 GB/512 GB SSD/Windows 1... 4.4 72 Ratings & 14 Reviews • Intel Core 5 Processor • 16 GB LPDDR5 RAM • 64 bit Windows 11 Home Operating System • 512 GB SSD • 35.56 cm (14 Inch) Display • 1 Year Warranty ₹64,990 ₹99,999 35% off Upto ₹48,250 Off on Exchange Bank Offer" [ref=f1e1339] [cursor=pointer]:
+          - /url: /acer-aspire-14-office-2024-m365-basic-i5-14th-gen-intel-core-5-210-h-16-gb-512-gb-ssd-windows-11-home-as14h-53-notebook/p/itm5ef35f1d0eb91?pid=COMHHPF4D9FMHKXH&lid=LSTCOMHHPF4D9FMHKXHCGJWPE&marketplace=FLIPKART&q=Laptop&store=6bo%2Fb5g&srno=s_1_19&otracker=search&otracker1=search&fm=organic&iid=5d23e9a6-3142-495b-896f-87a1b044a451.COMHHPF4D9FMHKXH.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=rpaptztjhc0000001790674366379&qH=146bdebb324a64d3&ov_redirect=true
+          - generic [ref=f1e1340]:
+            - img "Acer Aspire 14 Office 2024 + M365 Basic (i5 14th Gen) Intel Core 5 210 H - (16 GB/512 GB SSD/Windows 1..." [ref=f1e1344]
+            - generic [ref=f1e1345]: Add to Compare
+          - generic [ref=f1e1355]:
+            - generic [ref=f1e1356]:
+              - generic [ref=f1e1357]: Acer Aspire 14 Office 2024 + M365 Basic (i5 14th Gen) Intel Core 5 210 H - (16 GB/512 GB SSD/Windows 1...
+              - generic [ref=f1e1358]:
+                - generic [ref=f1e1359]: "4.4"
+                - generic [ref=f1e1362]: 72 Ratings & 14 Reviews
+              - list [ref=f1e1365]:
+                - listitem [ref=f1e1366]: • Intel Core 5 Processor
+                - listitem [ref=f1e1367]: • 16 GB LPDDR5 RAM
+                - listitem [ref=f1e1368]: • 64 bit Windows 11 Home Operating System
+                - listitem [ref=f1e1369]: • 512 GB SSD
+                - listitem [ref=f1e1370]: • 35.56 cm (14 Inch) Display
+                - listitem [ref=f1e1371]: • 1 Year Warranty
+            - generic [ref=f1e1372]:
+              - generic [ref=f1e1374]:
+                - generic [ref=f1e1375]: ₹64,990
+                - generic [ref=f1e1376]: ₹99,999
+                - generic [ref=f1e1377]: 35% off
+              - generic [ref=f1e1381]:
+                - generic [ref=f1e1382]: Upto
+                - generic [ref=f1e1383]: ₹48,250
+                - generic [ref=f1e1384]: Off on Exchange
+              - generic [ref=f1e1385]: Bank Offer
+        - link "Acer Aspire Lite Metal (2026) AMD Ryzen 3 Quad Core 5400U - (8 GB/512 GB SSD/Windows 11 Home) AL15-41 ... Add to Compare Acer Aspire Lite Metal (2026) AMD Ryzen 3 Quad Core 5400U - (8 GB/512 GB SSD/Windows 11 Home) AL15-41 ... 4.1 960 Ratings & 94 Reviews • AMD Ryzen 3 Quad Core Processor • 8 GB DDR4 RAM • Windows 11 Operating System • 512 GB SSD • 39.62 cm (15.6 Inch) Display • 1 Year Carry-in Warranty ₹46,990 ₹49,990 6% off Bank Offer" [ref=f1e1392] [cursor=pointer]:
+          - /url: /acer-aspire-lite-metal-2026-amd-ryzen-3-quad-core-5400u-8-gb-512-gb-ssd-windows-11-home-al15-41-thin-light-laptop/p/itm1bc0bcb4598e7?pid=COMH2TPSM9V7V38F&lid=LSTCOMH2TPSM9V7V38FUK0ITB&marketplace=FLIPKART&q=Laptop&store=6bo%2Fb5g&srno=s_1_20&otracker=search&otracker1=search&fm=organic&iid=5d23e9a6-3142-495b-896f-87a1b044a451.COMH2TPSM9V7V38F.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=rpaptztjhc0000001790674366379&qH=146bdebb324a64d3&ov_redirect=true
+          - generic [ref=f1e1393]:
+            - img "Acer Aspire Lite Metal (2026) AMD Ryzen 3 Quad Core 5400U - (8 GB/512 GB SSD/Windows 11 Home) AL15-41 ..." [ref=f1e1397]
+            - generic [ref=f1e1398]: Add to Compare
+          - generic [ref=f1e1408]:
+            - generic [ref=f1e1409]:
+              - generic [ref=f1e1410]: Acer Aspire Lite Metal (2026) AMD Ryzen 3 Quad Core 5400U - (8 GB/512 GB SSD/Windows 11 Home) AL15-41 ...
+              - generic [ref=f1e1411]:
+                - generic [ref=f1e1412]: "4.1"
+                - generic [ref=f1e1415]: 960 Ratings & 94 Reviews
+              - list [ref=f1e1418]:
+                - listitem [ref=f1e1419]: • AMD Ryzen 3 Quad Core Processor
+                - listitem [ref=f1e1420]: • 8 GB DDR4 RAM
+                - listitem [ref=f1e1421]: • Windows 11 Operating System
+                - listitem [ref=f1e1422]: • 512 GB SSD
+                - listitem [ref=f1e1423]: • 39.62 cm (15.6 Inch) Display
+                - listitem [ref=f1e1424]: • 1 Year Carry-in Warranty
+            - generic [ref=f1e1425]:
+              - generic [ref=f1e1427]:
+                - generic [ref=f1e1428]: ₹46,990
+                - generic [ref=f1e1429]: ₹49,990
+                - generic [ref=f1e1430]: 6% off
+              - generic [ref=f1e1431]: Bank Offer
+        - link "HP Omnibook 3 Next Gen AI PC Snapdragon X - (16 GB/512 GB SSD/Windows 11 Home) Omnibook 3 14-hz0024QU ... Add to Compare HP Omnibook 3 Next Gen AI PC Snapdragon X - (16 GB/512 GB SSD/Windows 11 Home) Omnibook 3 14-hz0024QU ... 4.3 107 Ratings & 19 Reviews • Snapdragon X Processor • 16 GB DDR5X RAM • Windows 11 Home Operating System • 512 GB SSD • 35.56 cm (14 inch) Display • MS Office Home 2024 • 1 Year Onsite Service ₹74,990 ₹99,637 24% off Upto ₹55,800 Off on Exchange Bank Offer" [ref=f1e1438] [cursor=pointer]:
+          - /url: /hp-omnibook-3-next-gen-ai-pc-snapdragon-x-16-gb-512-gb-ssd-windows-11-home-14-hz0024qu-laptop/p/itmbd5346cd09abc?pid=COMHZGK2ACSECZB5&lid=LSTCOMHZGK2ACSECZB52ALLPO&marketplace=FLIPKART&q=Laptop&store=6bo%2Fb5g&srno=s_1_21&otracker=search&otracker1=search&fm=organic&iid=en_yNu6bVwohDoR5nmEFR2aDKWR-oLLgQ0dNx-g3mT13wEomggL_k8EcIOf5hKdUxVRuCBRgNXvzZpCCBA4vDv09MWVgfZ_06OS9OGXHiodvQN9lm2JNMoQM1vL8Befhfib&ppt=dynamic&ppn=Login%3ACategory_List&ssid=rpaptztjhc0000001790674366379&qH=146bdebb324a64d3&ov_redirect=true
+          - generic [ref=f1e1439]:
+            - img "HP Omnibook 3 Next Gen AI PC Snapdragon X - (16 GB/512 GB SSD/Windows 11 Home) Omnibook 3 14-hz0024QU ..." [ref=f1e1443]
+            - generic [ref=f1e1444]: Add to Compare
+          - generic [ref=f1e1454]:
+            - generic [ref=f1e1455]:
+              - generic [ref=f1e1460]: HP Omnibook 3 Next Gen AI PC Snapdragon X - (16 GB/512 GB SSD/Windows 11 Home) Omnibook 3 14-hz0024QU ...
+              - generic [ref=f1e1461]:
+                - generic [ref=f1e1462]: "4.3"
+                - generic [ref=f1e1465]: 107 Ratings & 19 Reviews
+              - list [ref=f1e1468]:
+                - listitem [ref=f1e1469]: • Snapdragon X Processor
+                - listitem [ref=f1e1470]: • 16 GB DDR5X RAM
+                - listitem [ref=f1e1471]: • Windows 11 Home Operating System
+                - listitem [ref=f1e1472]: • 512 GB SSD
+                - listitem [ref=f1e1473]: • 35.56 cm (14 inch) Display
+                - listitem [ref=f1e1474]: • MS Office Home 2024
+                - listitem [ref=f1e1475]: • 1 Year Onsite Service
+            - generic [ref=f1e1476]:
+              - generic [ref=f1e1478]:
+                - generic [ref=f1e1479]: ₹74,990
+                - generic [ref=f1e1480]: ₹99,637
+                - generic [ref=f1e1481]: 24% off
+              - generic [ref=f1e1485]:
+                - generic [ref=f1e1486]: Upto
+                - generic [ref=f1e1487]: ₹55,800
+                - generic [ref=f1e1488]: Off on Exchange
+              - generic [ref=f1e1489]: Bank Offer
+        - link "MICROSOFT Surface Pro 12\" with Type Cover Core 8 with Microsoft 365 for 6 Months* Snapdragon X Plus - ... Add to Compare MICROSOFT Surface Pro 12\" with Type Cover Core 8 with Microsoft 365 for 6 Months* Snapdragon X Plus - ... 4.5 26 Ratings & 5 Reviews • Snapdragon X Plus Processor • 16 GB LPDDR5X RAM • 64 bit Windows 11 Operating System • 256 GB SSD • 30.48 cm (12 inch) Touchscreen Display • NA • 1 Year Limited Warranty ₹1,33,990 ₹1,45,898 8% off Upto ₹58,650 Off on Exchange Bank Offer" [ref=f1e1496] [cursor=pointer]:
+          - /url: /microsoft-surface-pro-12-type-cover-core-8-365-6-months-snapdragon-x-plus-16-gb-256-gb-ssd-windows-11-home-ep2-27654-ep2-32019-laptop/p/itm1adddaf77a282?pid=COMHJZJYUHVPGHHB&lid=LSTCOMHJZJYUHVPGHHBUF9HZX&marketplace=FLIPKART&q=Laptop&store=6bo%2Fb5g&srno=s_1_22&otracker=search&otracker1=search&fm=organic&iid=en_yNu6bVwohDoR5nmEFR2aDKWR-oLLgQ0dNx-g3mT13wGW7xf7mxvqRPfPbbac7POgcPOnQeK6CPWQ1v0ha8YUesp2-1J-jyJNKtvUep0C6LV9lm2JNMoQM1vL8Befhfib&ppt=dynamic&ppn=Login%3ACategory_List&ssid=rpaptztjhc0000001790674366379&qH=146bdebb324a64d3&ov_redirect=true
+          - generic [ref=f1e1497]:
+            - img "MICROSOFT Surface Pro 12\" with Type Cover Core 8 with Microsoft 365 for 6 Months* Snapdragon X Plus - ..." [ref=f1e1501]
+            - generic [ref=f1e1502]: Add to Compare
+          - generic [ref=f1e1512]:
+            - generic [ref=f1e1513]:
+              - generic [ref=f1e1518]: MICROSOFT Surface Pro 12" with Type Cover Core 8 with Microsoft 365 for 6 Months* Snapdragon X Plus - ...
+              - generic [ref=f1e1519]:
+                - generic [ref=f1e1520]: "4.5"
+                - generic [ref=f1e1523]: 26 Ratings & 5 Reviews
+              - list [ref=f1e1526]:
+                - listitem [ref=f1e1527]: • Snapdragon X Plus Processor
+                - listitem [ref=f1e1528]: • 16 GB LPDDR5X RAM
+                - listitem [ref=f1e1529]: • 64 bit Windows 11 Operating System
+                - listitem [ref=f1e1530]: • 256 GB SSD
+                - listitem [ref=f1e1531]: • 30.48 cm (12 inch) Touchscreen Display
+                - listitem [ref=f1e1532]: • NA
+                - listitem [ref=f1e1533]: • 1 Year Limited Warranty
+            - generic [ref=f1e1534]:
+              - generic [ref=f1e1536]:
+                - generic [ref=f1e1537]: ₹1,33,990
+                - generic [ref=f1e1538]: ₹1,45,898
+                - generic [ref=f1e1539]: 8% off
+              - generic [ref=f1e1543]:
+                - generic [ref=f1e1544]: Upto
+                - generic [ref=f1e1545]: ₹58,650
+                - generic [ref=f1e1546]: Off on Exchange
+              - generic [ref=f1e1547]: Bank Offer
+        - link "Neopticon Ebook Intel Celeron Dual Core - (4 GB/128 GB SSD/128 GB EMMC Storage/Windows 11 Home) BBEN40... Add to Compare Neopticon Ebook Intel Celeron Dual Core - (4 GB/128 GB SSD/128 GB EMMC Storage/Windows 11 Home) BBEN40... 3.3 20 Ratings & 0 Reviews • Intel Celeron Dual Core Processor • 4 GB DDR4 RAM • 64 bit Windows 11 Home Operating System • 128 GB SSD • 29.46 cm (11.6 Inch) Touchscreen Display • 1 Year Onsite Warranty ₹17,259 ₹24,999 30% off Only few left Bank Offer" [ref=f1e1554] [cursor=pointer]:
+          - /url: /neopticon-ebook-intel-celeron-dual-core-4-gb-128-gb-ssd-128-emmc-storage-windows-11-home-bben40412811-notebook/p/itm6c14bc3bfdbb2?pid=COMHG8YXDU3JQ8GG&lid=LSTCOMHG8YXDU3JQ8GGU3OZLG&marketplace=FLIPKART&q=Laptop&store=6bo%2Fb5g&srno=s_1_23&otracker=search&otracker1=search&fm=organic&iid=5d23e9a6-3142-495b-896f-87a1b044a451.COMHG8YXDU3JQ8GG.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=rpaptztjhc0000001790674366379&qH=146bdebb324a64d3&ov_redirect=true
+          - generic [ref=f1e1555]:
+            - img "Neopticon Ebook Intel Celeron Dual Core - (4 GB/128 GB SSD/128 GB EMMC Storage/Windows 11 Home) BBEN40..." [ref=f1e1559]
+            - generic [ref=f1e1560]: Add to Compare
+          - generic [ref=f1e1570]:
+            - generic [ref=f1e1571]:
+              - generic [ref=f1e1572]: Neopticon Ebook Intel Celeron Dual Core - (4 GB/128 GB SSD/128 GB EMMC Storage/Windows 11 Home) BBEN40...
+              - generic [ref=f1e1573]:
+                - generic [ref=f1e1574]: "3.3"
+                - generic [ref=f1e1577]: 20 Ratings & 0 Reviews
+              - list [ref=f1e1580]:
+                - listitem [ref=f1e1581]: • Intel Celeron Dual Core Processor
+                - listitem [ref=f1e1582]: • 4 GB DDR4 RAM
+                - listitem [ref=f1e1583]: • 64 bit Windows 11 Home Operating System
+                - listitem [ref=f1e1584]: • 128 GB SSD
+                - listitem [ref=f1e1585]: • 29.46 cm (11.6 Inch) Touchscreen Display
+                - listitem [ref=f1e1586]: • 1 Year Onsite Warranty
+            - generic [ref=f1e1587]:
+              - generic [ref=f1e1589]:
+                - generic [ref=f1e1590]: ₹17,259
+                - generic [ref=f1e1591]: ₹24,999
+                - generic [ref=f1e1592]: 30% off
+              - generic [ref=f1e1593]: Only few left
+              - generic [ref=f1e1596]: Bank Offer
+        - link "Acer Aspire 3 Intel Celeron Dual Core - (8 GB/256 GB SSD/Windows 11 Home) A311-45 Thin and Light Lapto... Add to Compare Acer Aspire 3 Intel Celeron Dual Core - (8 GB/256 GB SSD/Windows 11 Home) A311-45 Thin and Light Lapto... 3.7 10,430 Ratings & 1,083 Reviews • Intel Celeron Dual Core Processor • 8 GB DDR4 RAM • 64 bit Windows 11 Home Operating System • 256 GB SSD • 29.46 cm (11.6 Inch) Display • 1 Year Warranty ₹39,899 ₹48,999 18% off Only 2 left Bank Offer" [ref=f1e1603] [cursor=pointer]:
+          - /url: /acer-aspire-3-intel-celeron-dual-core-8-gb-256-gb-ssd-windows-11-home-a311-45-thin-light-laptop/p/itmad38595c5a902?pid=COMH7NCZ8BARKXFF&lid=LSTCOMH7NCZ8BARKXFFUI0TDB&marketplace=FLIPKART&q=Laptop&store=6bo%2Fb5g&srno=s_1_24&otracker=search&otracker1=search&fm=organic&iid=5d23e9a6-3142-495b-896f-87a1b044a451.COMH7NCZ8BARKXFF.SEARCH&ppt=dynamic&ppn=Login%3ACategory_List&ssid=rpaptztjhc0000001790674366379&qH=146bdebb324a64d3&ov_redirect=true
+          - generic [ref=f1e1604]:
+            - img "Acer Aspire 3 Intel Celeron Dual Core - (8 GB/256 GB SSD/Windows 11 Home) A311-45 Thin and Light Lapto..." [ref=f1e1608]
+            - generic [ref=f1e1609]: Add to Compare
+          - generic [ref=f1e1619]:
+            - generic [ref=f1e1620]:
+              - generic [ref=f1e1621]: Acer Aspire 3 Intel Celeron Dual Core - (8 GB/256 GB SSD/Windows 11 Home) A311-45 Thin and Light Lapto...
+              - generic [ref=f1e1622]:
+                - generic [ref=f1e1623]: "3.7"
+                - generic [ref=f1e1626]: 10,430 Ratings & 1,083 Reviews
+              - list [ref=f1e1629]:
+                - listitem [ref=f1e1630]: • Intel Celeron Dual Core Processor
+                - listitem [ref=f1e1631]: • 8 GB DDR4 RAM
+                - listitem [ref=f1e1632]: • 64 bit Windows 11 Home Operating System
+                - listitem [ref=f1e1633]: • 256 GB SSD
+                - listitem [ref=f1e1634]: • 29.46 cm (11.6 Inch) Display
+                - listitem [ref=f1e1635]: • 1 Year Warranty
+            - generic [ref=f1e1636]:
+              - generic [ref=f1e1638]:
+                - generic [ref=f1e1639]: ₹39,899
+                - generic [ref=f1e1640]: ₹48,999
+                - generic [ref=f1e1641]: 18% off
+              - generic [ref=f1e1642]: Only 2 left
+              - generic [ref=f1e1645]: Bank Offer
+        - generic [ref=f1e1650]:
+          - generic [ref=f1e1651]: Page 1 of 94
+          - navigation [ref=f1e1652]:
+            - link "1" [ref=f1e1653] [cursor=pointer]:
+              - /url: /search?q=Laptop&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=1
+            - link "2" [ref=f1e1654] [cursor=pointer]:
+              - /url: /search?q=Laptop&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=2
+            - link "3" [ref=f1e1655] [cursor=pointer]:
+              - /url: /search?q=Laptop&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=3
+            - link "4" [ref=f1e1656] [cursor=pointer]:
+              - /url: /search?q=Laptop&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=4
+            - link "5" [ref=f1e1657] [cursor=pointer]:
+              - /url: /search?q=Laptop&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=5
+            - link "6" [ref=f1e1658] [cursor=pointer]:
+              - /url: /search?q=Laptop&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=6
+            - link "7" [ref=f1e1659] [cursor=pointer]:
+              - /url: /search?q=Laptop&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=7
+            - link "8" [ref=f1e1660] [cursor=pointer]:
+              - /url: /search?q=Laptop&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=8
+            - link "9" [ref=f1e1661] [cursor=pointer]:
+              - /url: /search?q=Laptop&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=9
+            - link "10" [ref=f1e1662] [cursor=pointer]:
+              - /url: /search?q=Laptop&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=10
+            - link "Next" [ref=f1e1663] [cursor=pointer]:
+              - /url: /search?q=Laptop&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=2
+        - generic [ref=f1e1665]:
+          - text: Did you find what you were looking for?
+          - generic [ref=f1e1666]:
+            - generic [ref=f1e1667] [cursor=pointer]: "Yes"
+            - generic [ref=f1e1668] [cursor=pointer]: "No"
+    - generic [ref=f1e1670]:
+      - generic [ref=f1e1671]: Reviews for Popular Laptops
+      - generic [ref=f1e1672]:
+        - generic [ref=f1e1673]:
+          - generic [ref=f1e1675]:
+            - img "HP 15 (2025) AMD Athlon Dual Core 7120U - (8 GB/256 GB SSD/Windows 11 Home) 15 Thin and Light Laptop"
+          - generic [ref=f1e1676]:
+            - link "1. HP 15 (2025) AMD Athlon Dua... 4.1 385 Ratings&37 Reviews ₹47,905 4% off" [ref=f1e1677] [cursor=pointer]:
+              - /url: /hp-15-2025-amd-athlon-dual-core-7120u-8-gb-256-gb-ssd-windows-11-home-thin-light-laptop/p/itm356259fbc5fcb?pid=COMHCPHGZXJWVNX2&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=f1e1678]: 1. HP 15 (2025) AMD Athlon Dua...
+              - generic [ref=f1e1680]:
+                - generic [ref=f1e1681]: "4.1"
+                - generic [ref=f1e1683]:
+                  - text: 385 Ratings
+                  - generic [ref=f1e1684]: "&37 Reviews"
+              - generic [ref=f1e1686]:
+                - generic [ref=f1e1687]: ₹47,905
+                - generic [ref=f1e1688]: 4% off
+            - list [ref=f1e1689]:
+              - listitem [ref=f1e1690]: AMD Athlon Dual Core Processor
+              - listitem [ref=f1e1691]: 8 GB DDR4 RAM
+              - listitem [ref=f1e1692]: 64 bit Windows 11 Home Operating System
+        - generic [ref=f1e1693]:
+          - generic [ref=f1e1694]: Most Helpful Review
+          - generic [ref=f1e1696]:
+            - generic [ref=f1e1697]:
+              - generic [ref=f1e1698]: "4"
+              - paragraph [ref=f1e1700]: Worth the money
+            - generic [ref=f1e1701]: Good Laptop in this price range.Useful for office work and attending meetings.Functioning is bit slow and screen brightness is not good for prolonged usage.
+            - generic [ref=f1e1706]:
+              - paragraph [ref=f1e1707]: Chandrakant Ballolli
+              - paragraph [ref=f1e1712]: Certified Buyer
+              - paragraph [ref=f1e1713]: 11 months ago
+        - generic [ref=f1e1714]:
+          - generic [ref=f1e1715]: Recent Review
+          - generic [ref=f1e1717]:
+            - generic [ref=f1e1718]:
+              - generic [ref=f1e1719]: "2"
+              - paragraph [ref=f1e1721]: Expected a better product
+            - generic [ref=f1e1722]: The laptop is very slow can I change it?
+            - generic [ref=f1e1727]:
+              - paragraph [ref=f1e1728]: Flipkart Customer
+              - paragraph [ref=f1e1733]: Certified Buyer
+              - paragraph [ref=f1e1734]: 1 month ago
+      - generic [ref=f1e1735]:
+        - generic [ref=f1e1736]:
+          - generic [ref=f1e1738]:
+            - img "MICROSOFT Surface Laptop 13\" with Microsoft 365 for 6 Months* Snapdragon X Plus - (16 GB/256 GB SSD/Windows 11 Home) EP2-36996 Laptop"
+          - generic [ref=f1e1739]:
+            - link "2. MICROSOFT Surface Laptop 13... 4.4 55 Ratings&9 Reviews ₹1,00,999" [ref=f1e1740] [cursor=pointer]:
+              - /url: /microsoft-surface-laptop-13-365-6-months-snapdragon-x-plus-16-gb-256-gb-ssd-windows-11-home-ep2-36996/p/itm4ee6305cb4b81?pid=COMHHX3YYWYQHH2K&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=f1e1741]: 2. MICROSOFT Surface Laptop 13...
+              - generic [ref=f1e1743]:
+                - generic [ref=f1e1744]: "4.4"
+                - generic [ref=f1e1746]:
+                  - text: 55 Ratings
+                  - generic [ref=f1e1747]: "&9 Reviews"
+              - generic [ref=f1e1748]: ₹1,00,999
+            - list [ref=f1e1751]:
+              - listitem [ref=f1e1752]: Snapdragon X Plus Processor
+              - listitem [ref=f1e1753]: 16 GB LPDDR5X RAM
+              - listitem [ref=f1e1754]: 64 bit Windows 11 Operating System
+        - generic [ref=f1e1755]:
+          - generic [ref=f1e1756]: Most Helpful Review
+          - generic [ref=f1e1758]:
+            - generic [ref=f1e1759]:
+              - generic [ref=f1e1760]: "5"
+              - paragraph [ref=f1e1762]: Classy product
+            - generic [ref=f1e1763]: Amazing laptop! The build quality and the battery life is amazing, lasts easily 15hrs on regular usage.
+            - generic [ref=f1e1768]:
+              - paragraph [ref=f1e1769]: Akshit soni
+              - paragraph [ref=f1e1774]: Certified Buyer
+              - paragraph [ref=f1e1775]: 1 day ago
+        - generic [ref=f1e1776]:
+          - generic [ref=f1e1777]: Recent Review
+          - generic [ref=f1e1779]:
+            - generic [ref=f1e1780]:
+              - generic [ref=f1e1781]: "5"
+              - paragraph [ref=f1e1783]: Classy product
+            - generic [ref=f1e1784]: Amazing laptop! The build quality and the battery life is amazing, lasts easily 15hrs on regular usage.
+            - generic [ref=f1e1789]:
+              - paragraph [ref=f1e1790]: Akshit soni
+              - paragraph [ref=f1e1795]: Certified Buyer
+              - paragraph [ref=f1e1796]: 1 day ago
+      - generic [ref=f1e1797]:
+        - generic [ref=f1e1798]:
+          - generic [ref=f1e1800]:
+            - img "DELL 15 AMD Ryzen 5 Quad Core 7520U - (8 GB/512 GB SSD/Windows 11 Home) 3535 Thin and Light Laptop"
+          - generic [ref=f1e1801]:
+            - link "3. DELL 15 AMD Ryzen 5 Quad Co... 4.1 79 Ratings&7 Reviews ₹54,990 16% off" [ref=f1e1802] [cursor=pointer]:
+              - /url: /dell-15-amd-ryzen-5-quad-core-7520u-8-gb-512-gb-ssd-windows-11-home-3535-thin-light-laptop/p/itm277d6cd7790c2?pid=COMH8EPFHZRD9YDC&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=f1e1803]: 3. DELL 15 AMD Ryzen 5 Quad Co...
+              - generic [ref=f1e1805]:
+                - generic [ref=f1e1806]: "4.1"
+                - generic [ref=f1e1808]:
+                  - text: 79 Ratings
+                  - generic [ref=f1e1809]: "&7 Reviews"
+              - generic [ref=f1e1811]:
+                - generic [ref=f1e1812]: ₹54,990
+                - generic [ref=f1e1813]: 16% off
+            - list [ref=f1e1814]:
+              - listitem [ref=f1e1815]: AMD Ryzen 5 Quad Core Processor
+              - listitem [ref=f1e1816]: 8 GB LPDDR5 RAM
+              - listitem [ref=f1e1817]: Windows 11 Operating System
+        - generic [ref=f1e1818]:
+          - generic [ref=f1e1819]: Most Helpful Review
+          - generic [ref=f1e1821]:
+            - generic [ref=f1e1822]:
+              - generic [ref=f1e1823]: "4"
+              - paragraph [ref=f1e1825]: Value-for-money
+            - generic [ref=f1e1826]: I got it arround 32k, at this price every thing is good by the battry backup could have better.
+            - generic [ref=f1e1831]:
+              - paragraph [ref=f1e1832]: Flipkart Customer
+              - paragraph [ref=f1e1837]: Certified Buyer
+              - paragraph [ref=f1e1838]: Mar, 2025
+        - generic [ref=f1e1839]:
+          - generic [ref=f1e1840]: Recent Review
+          - generic [ref=f1e1842]:
+            - generic [ref=f1e1843]:
+              - generic [ref=f1e1844]: "5"
+              - paragraph [ref=f1e1846]: Simply awesome
+            - generic [ref=f1e1849]:
+              - generic [ref=f1e1850]: Battery backup maximum 4 hours. Performance as per price point it is good. I played GTA vice City, GTA San Andreas is performing mobile and good. Keyboard...
+              - generic [ref=f1e1851] [cursor=pointer]: Read full review
+            - generic [ref=f1e1853]:
+              - paragraph [ref=f1e1854]: Flipkart Customer
+              - paragraph [ref=f1e1859]: Certified Buyer
+              - paragraph [ref=f1e1860]: 6 months ago
+      - generic [ref=f1e1861]:
+        - generic [ref=f1e1862]:
+          - generic [ref=f1e1864]:
+            - img "Acer Aspire 3 Intel Core i5 13th Gen 1334U - (16 GB/512 GB SSD/Windows 11 Home) A324-53 Thin and Light Laptop"
+          - generic [ref=f1e1865]:
+            - link "4. Acer Aspire 3 Intel Core i5... 4.3 1,735 Ratings&134 Reviews ₹49,990 25% off" [ref=f1e1866] [cursor=pointer]:
+              - /url: /acer-aspire-3-intel-core-i5-13th-gen-1334u-16-gb-512-gb-ssd-windows-11-home-a324-53-thin-light-laptop/p/itm707770fddc7e9?pid=COMH4B6CGZKHKUV3&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=f1e1867]: 4. Acer Aspire 3 Intel Core i5...
+              - generic [ref=f1e1869]:
+                - generic [ref=f1e1870]: "4.3"
+                - generic [ref=f1e1872]:
+                  - text: 1,735 Ratings
+                  - generic [ref=f1e1873]: "&134 Reviews"
+              - generic [ref=f1e1875]:
+                - generic [ref=f1e1876]: ₹49,990
+                - generic [ref=f1e1877]: 25% off
+            - list [ref=f1e1878]:
+              - listitem [ref=f1e1879]: Intel Core i5 Processor (13th Gen)
+              - listitem [ref=f1e1880]: 16 GB DDR4 RAM
+              - listitem [ref=f1e1881]: Windows 11 Operating System
+        - generic [ref=f1e1882]:
+          - generic [ref=f1e1883]: Most Helpful Review
+          - generic [ref=f1e1885]:
+            - generic [ref=f1e1886]:
+              - generic [ref=f1e1887]: "3"
+              - paragraph [ref=f1e1889]: Good
+            - generic [ref=f1e1890]: The product doesn't consists of ms office
+            - generic [ref=f1e1895]:
+              - paragraph [ref=f1e1896]: Akhil Maddi
+              - paragraph [ref=f1e1901]: Certified Buyer
+              - paragraph [ref=f1e1902]: May, 2025
+        - generic [ref=f1e1903]:
+          - generic [ref=f1e1904]: Recent Review
+          - generic [ref=f1e1906]:
+            - generic [ref=f1e1907]:
+              - generic [ref=f1e1908]: "1"
+              - paragraph [ref=f1e1910]: Worst experience ever!
+            - generic [ref=f1e1913]:
+              - generic [ref=f1e1914]: I, too, bought this laptop specifically to run MS Office, as I work in a company; however, they haven't included Excel in it at all. I have been repeatedly t...
+              - generic [ref=f1e1915] [cursor=pointer]: Read full review
+            - generic [ref=f1e1917]:
+              - paragraph [ref=f1e1918]: mohd muntazir
+              - paragraph [ref=f1e1923]: Certified Buyer
+              - paragraph [ref=f1e1924]: 4 months ago
+      - generic [ref=f1e1925]:
+        - generic [ref=f1e1926]:
+          - generic [ref=f1e1928]:
+            - img "MICROSOFT Surface Pro 12\" with Type Cover Core 8 with Microsoft 365 for 6 Months* Snapdragon X Plus - (16 GB/256 GB SSD/Windows 11 Home) EP2-27654-EP2-32019 Laptop"
+          - generic [ref=f1e1929]:
+            - link "5. MICROSOFT Surface Pro 12\" w... 4.5 26 Ratings&5 Reviews ₹1,33,990 8% off" [ref=f1e1930] [cursor=pointer]:
+              - /url: /microsoft-surface-pro-12-type-cover-core-8-365-6-months-snapdragon-x-plus-16-gb-256-gb-ssd-windows-11-home-ep2-27654-ep2-32019-laptop/p/itm1adddaf77a282?pid=COMHJZJYUHVPGHHB&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=f1e1931]: 5. MICROSOFT Surface Pro 12" w...
+              - generic [ref=f1e1933]:
+                - generic [ref=f1e1934]: "4.5"
+                - generic [ref=f1e1936]:
+                  - text: 26 Ratings
+                  - generic [ref=f1e1937]: "&5 Reviews"
+              - generic [ref=f1e1939]:
+                - generic [ref=f1e1940]: ₹1,33,990
+                - generic [ref=f1e1941]: 8% off
+            - list [ref=f1e1942]:
+              - listitem [ref=f1e1943]: Snapdragon X Plus Processor
+              - listitem [ref=f1e1944]: 16 GB LPDDR5X RAM
+              - listitem [ref=f1e1945]: 64 bit Windows 11 Operating System
+        - generic [ref=f1e1946]:
+          - generic [ref=f1e1947]: Most Helpful Review
+          - generic [ref=f1e1949]:
+            - generic [ref=f1e1950]:
+              - generic [ref=f1e1951]: "5"
+              - paragraph [ref=f1e1953]: Fabulous!
+            - generic [ref=f1e1954]: Better choice over an iPad.
+            - generic [ref=f1e1959]:
+              - paragraph [ref=f1e1960]: Naman Goel
+              - paragraph [ref=f1e1965]: Certified Buyer
+              - paragraph [ref=f1e1966]: 1 month ago
+        - generic [ref=f1e1967]:
+          - generic [ref=f1e1968]: Recent Review
+          - generic [ref=f1e1970]:
+            - generic [ref=f1e1971]:
+              - generic [ref=f1e1972]: "5"
+              - paragraph [ref=f1e1974]: Terrific purchase
+            - generic [ref=f1e1975]: Best for office purpose and etc. I will recommended to buy this
+            - generic [ref=f1e1980]:
+              - paragraph [ref=f1e1981]: Hafeezulla Syed
+              - paragraph [ref=f1e1986]: Certified Buyer
+              - paragraph [ref=f1e1987]: 29 days ago
+  - contentinfo [ref=f1e1988]:
+    - generic [ref=f1e1990]:
+      - generic [ref=f1e1991]:
+        - generic [ref=f1e1992]:
+          - generic [ref=f1e1993]: ABOUT
+          - link "Contact Us" [ref=f1e1994] [cursor=pointer]:
+            - /url: /helpcentre?otracker=footer_navlinks
+          - link "About Us" [ref=f1e1995] [cursor=pointer]:
+            - /url: https://corporate.flipkart.net/corporate-home
+          - link "Careers" [ref=f1e1996] [cursor=pointer]:
+            - /url: https://www.flipkartcareers.com/?otracker=footer_navlinks
+          - link "Flipkart Stories" [ref=f1e1997] [cursor=pointer]:
+            - /url: http://stories.flipkart.com/?otracker=footer_navlinks
+          - link "Press" [ref=f1e1998] [cursor=pointer]:
+            - /url: http://stories.flipkart.com/category/top-stories/news/
+          - link "Corporate Information" [ref=f1e1999] [cursor=pointer]:
+            - /url: /corporate-information
+        - generic [ref=f1e2000]:
+          - generic [ref=f1e2001]: GROUP COMPANIES
+          - link "Myntra" [ref=f1e2002] [cursor=pointer]:
+            - /url: https://www.myntra.com/
+          - link "Cleartrip" [ref=f1e2003] [cursor=pointer]:
+            - /url: https://www.cleartrip.com/
+          - link "Shopsy" [ref=f1e2004] [cursor=pointer]:
+            - /url: https://www.shopsy.in/
+        - generic [ref=f1e2005]:
+          - generic [ref=f1e2006]: HELP
+          - link "Payments" [ref=f1e2007] [cursor=pointer]:
+            - /url: /pages/payments
+          - link "Shipping" [ref=f1e2008] [cursor=pointer]:
+            - /url: /pages/shipping
+          - link "Cancellation & Returns" [ref=f1e2009] [cursor=pointer]:
+            - /url: /helpcentre?catalog=55c9c6edb000002e002c1701&view=CATALOG
+          - link "FAQ" [ref=f1e2010] [cursor=pointer]:
+            - /url: /helpcentre?catalog=55c9c8e2b0000023002c1702&view=CATALOG
+        - generic [ref=f1e2011]:
+          - generic [ref=f1e2012]: CONSUMER POLICY
+          - link "Cancellation & Returns" [ref=f1e2013] [cursor=pointer]:
+            - /url: /pages/returnpolicy?otracker=footer_navlinks
+          - link "Terms Of Use" [ref=f1e2014] [cursor=pointer]:
+            - /url: /pages/terms?otracker=footer_navlinks
+          - link "Security" [ref=f1e2015] [cursor=pointer]:
+            - /url: /pages/paymentsecurity?otracker=footer_navlinks
+          - link "Privacy" [ref=f1e2016] [cursor=pointer]:
+            - /url: /pages/privacypolicy?otracker=footer_navlinks
+          - link "Sitemap" [ref=f1e2017] [cursor=pointer]:
+            - /url: /sitemap?otracker=footer_navlinks
+          - link "Grievance Redressal" [ref=f1e2018] [cursor=pointer]:
+            - /url: /pages/grievance-redressal-mechanism?otracker=footer_navlinks
+          - link "EPR Compliance" [ref=f1e2019] [cursor=pointer]:
+            - /url: /pages/ewaste-compliance-tnc?otracker=footer_navlinks
+          - link "FSSAI Food Safety Connect App" [ref=f1e2020] [cursor=pointer]:
+            - /url: https://fssai.gov.in/cms/food-safety-connect.php
+        - generic [ref=f1e2022]:
+          - generic [ref=f1e2023]: "Mail Us:"
+          - generic [ref=f1e2026]:
+            - paragraph [ref=f1e2027]: Flipkart Internet Private Limited,
+            - paragraph [ref=f1e2028]: Buildings Alyssa, Begonia &
+            - paragraph [ref=f1e2029]: Clove Embassy Tech Village,
+            - paragraph [ref=f1e2030]: Outer Ring Road, Devarabeesanahalli Village,
+            - paragraph [ref=f1e2031]: Bengaluru, 560103,
+            - paragraph [ref=f1e2032]: Karnataka, India
+          - generic [ref=f1e2033]: Social
+          - generic [ref=f1e2034]:
+            - link [ref=f1e2036] [cursor=pointer]:
+              - /url: https://www.facebook.com/flipkart
+            - link [ref=f1e2039] [cursor=pointer]:
+              - /url: https://www.twitter.com/flipkart
+            - link [ref=f1e2042] [cursor=pointer]:
+              - /url: https://www.youtube.com/flipkart
+            - link [ref=f1e2045] [cursor=pointer]:
+              - /url: https://www.instagram.com/flipkart
+        - generic [ref=f1e2048]:
+          - generic [ref=f1e2049]: "Registered Office Address:"
+          - generic [ref=f1e2052]:
+            - paragraph [ref=f1e2053]: Flipkart Internet Private Limited,
+            - paragraph [ref=f1e2054]: Buildings Alyssa, Begonia &
+            - paragraph [ref=f1e2055]: Clove Embassy Tech Village,
+            - paragraph [ref=f1e2056]: Outer Ring Road, Devarabeesanahalli Village,
+            - paragraph [ref=f1e2057]: Bengaluru, 560103,
+            - paragraph [ref=f1e2058]: Karnataka, India
+            - paragraph [ref=f1e2059]: "CIN : U51109KA2012PTC066107"
+            - paragraph [ref=f1e2060]:
+              - text: "Telephone:"
+              - link "044-45614700" [ref=f1e2061] [cursor=pointer]:
+                - /url: tel:044-45614700
+              - text: /
+              - link "044-67415800" [ref=f1e2062] [cursor=pointer]:
+                - /url: tel:044-67415800
+      - generic [ref=f1e2064]:
+        - link "Become a Seller" [ref=f1e2067] [cursor=pointer]:
+          - /url: https://seller.flipkart.com/?utm_source=fkwebsite&utm_medium=websitedirect
+        - generic [ref=f1e2068]: Advertise
+        - link "Gift Cards" [ref=f1e2072] [cursor=pointer]:
+          - /url: /the-gift-card-store?otracker=footer_navlinks
+        - link "Help Center" [ref=f1e2075] [cursor=pointer]:
+          - /url: /helpcentre?otracker=footer_navlinks
+        - generic [ref=f1e2076]: © 2007-2026 Flipkart.com
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test';
+  2  | 
+  3  | test('Verify search functionality in flipkart', async ({ page }) => {
+  4  |     
+  5  |     await page.goto('https://www.flipkart.com/');
+  6  | 
+  7  |     const searchBox = page.getByPlaceholder('Search for Products, Brands and More').first();
+  8  |     await page.getByRole('button', { name: '✕' }).click();
+  9  |     
+  10 |     await searchBox.fill('Laptop');
+  11 |     await page.getByRole('button', { name: 'Search' }).click();
+  12 | 
+  13 |     await expect(page).toHaveURL(/search/i);
+  14 | 
+  15 |    /*const laptop = await page.locator("//div[@class='UCc1lI']").first().waitFor();
+  16 |    await laptop.click();*/
+  17 |   const newPagePromise = page.waitForEvent('popup');
+  18 |   
+  19 |    const firstLaptop = await page.locator('.jIjQ8S').first();
+  20 |    await firstLaptop.click();
+  21 |  
+  22 | 
+  23 |    const productPage = await newPagePromise;
+  24 | 
+> 25 |     await productPage.getByRole('heading').getByText('more').click();
+     |                                                              ^ Error: locator.click: Test timeout of 30000ms exceeded.
+  26 |  
+  27 |    const firstLaptopTitle = await productPage.getByRole('heading').first().innerText();
+  28 |    console.log(firstLaptopTitle);
+  29 | 
+  30 |    const Price = await productPage.locator('.v1zwn21n v1zwn20 _1psv1zeb9 _1psv1ze0').first().innerText();
+  31 | 
+  32 |    console.log(Price);
+  33 | s
+  34 | 
+  35 | });
+  36 | 
+  37 | 
+  38 | 
+```

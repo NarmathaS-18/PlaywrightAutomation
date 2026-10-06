@@ -31,6 +31,8 @@ test('Make Appointment', async ({ page }, testInfo) => {
     await page.getByRole('columnheader', { name: '»' }).click();
     await page.getByRole('cell', { name: '10' }).click();
 
+    
+
 
     await page.getByPlaceholder('Comment').fill('This is a test comment.');
 
